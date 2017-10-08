@@ -17,7 +17,28 @@ import javax.swing.JPanel;
 public class Odontograma extends javax.swing.JFrame {
 
     public boolean carie;
-    public boolean Amalgama;
+    public boolean Obturacion;
+    public boolean CoronaBuena;
+    public boolean CoronaARealizar;
+    public boolean ConEndodoncia;
+    public boolean NecesitaEndodoncia;
+    public boolean Trauma;
+    public boolean Recurrente;
+    public boolean DienteAusente;
+    public boolean SinErupcionar;
+    public boolean ConSellante;
+    public boolean NecesitaSellante;
+    public boolean ExodonciaRealizada;
+    public boolean ExodonciaIndicada;
+    public boolean Abracion;
+    public boolean Atricion;
+    public boolean NucleoBueno;
+    public boolean NucleoARealizar;
+    public boolean SemiIncluido;
+    public boolean Giroversion;
+    public boolean Provisional;
+    public boolean ResinaFisica;
+    public boolean IonometroDeVidrio;
     public JPanel jPanel;
     public JButton jButton;
     public int cod_diente;
@@ -168,6 +189,27 @@ public class Odontograma extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
+        jButton23 = new javax.swing.JButton();
+        jButton24 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
@@ -1767,10 +1809,157 @@ public class Odontograma extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Amalgama");
+        jButton2.setText("Obturación");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Corona Buena");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setText("Corona a Realizar");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton6.setText("Con Endodoncia");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        jButton7.setText("Necesita Endodoncia");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
+        jButton8.setText("Trauma");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        jButton9.setText("Recurrente");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        jButton10.setText("Diente Ausente");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        jButton11.setText("Sin Erupcionar");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+
+        jButton12.setText("Con Sellante");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
+        jButton13.setText("Necesita Sellante");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
+        jButton14.setText("Exodoncia Realizada");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        jButton15.setText("Exodoncia Iniciada");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+
+        jButton16.setText("Abracion");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
+        jButton17.setText("Atrición");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+
+        jButton18.setText("Nucleo Bueno");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+
+        jButton19.setText("Nucleo a Realizar");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+
+        jButton20.setText("Semi Incluido");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
+
+        jButton21.setText("Giroversión");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+
+        jButton22.setText("Provisional");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
+
+        jButton23.setText("Resina Física");
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton23ActionPerformed(evt);
+            }
+        });
+
+        jButton24.setText("Ionometro de Vidrio");
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton24ActionPerformed(evt);
             }
         });
 
@@ -1778,18 +1967,103 @@ public class Odontograma extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton3)
+                    .addComponent(jButton5)
+                    .addComponent(jButton6))
+                .addGap(84, 84, 84)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton18)
+                    .addComponent(jButton17)
+                    .addComponent(jButton16))
+                .addGap(35, 65, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 124, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton15)
+                    .addComponent(jButton14))
+                .addGap(25, 25, 25))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton7)
+                            .addComponent(jButton8))
+                        .addGap(70, 70, 70)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton20)
+                            .addComponent(jButton19)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton9)
+                        .addGap(114, 114, 114)
+                        .addComponent(jButton21))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton10)
+                        .addGap(94, 94, 94)
+                        .addComponent(jButton22))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton11)
+                            .addComponent(jButton12)
+                            .addComponent(jButton13))
+                        .addGap(86, 86, 86)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton24)
+                            .addComponent(jButton23))))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jButton1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton14))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton15))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton3)
+                    .addComponent(jButton16))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton5)
+                    .addComponent(jButton17))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton6)
+                    .addComponent(jButton18))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton7)
+                    .addComponent(jButton19))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton8)
+                    .addComponent(jButton20))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton9)
+                    .addComponent(jButton21))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton10)
+                    .addComponent(jButton22))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton11)
+                    .addComponent(jButton23))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton12)
+                    .addComponent(jButton24))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton13)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -1838,7 +2112,7 @@ public class Odontograma extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtnDiente18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente18ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente18;
             cod_diente = 18;
@@ -1850,11 +2124,32 @@ public class Odontograma extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.carie = true;
-        this.Amalgama = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jbtnDiente17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente17ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente17;
             cod_diente = 17;
@@ -1866,7 +2161,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente17ActionPerformed
 
     private void jbtnDiente16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente16ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente16;
             cod_diente = 16;
@@ -1878,7 +2173,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente16ActionPerformed
 
     private void jbtnDiente15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente15ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente15;
             cod_diente = 15;
@@ -1890,7 +2185,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente15ActionPerformed
 
     private void jbtnDiente14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente14ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente14;
             cod_diente = 14;
@@ -1902,7 +2197,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente14ActionPerformed
 
     private void jbtnDiente13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente13ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente13;
             cod_diente = 13;
@@ -1914,7 +2209,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente13ActionPerformed
 
     private void jbtnDiente12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente12ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente12;
             cod_diente = 12;
@@ -1926,7 +2221,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente12ActionPerformed
 
     private void jbtnDiente11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente11ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente11;
             cod_diente = 11;
@@ -1938,7 +2233,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente11ActionPerformed
 
     private void jbtnDiente55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente55ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente55;
             cod_diente = 55;
@@ -1950,7 +2245,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente55ActionPerformed
 
     private void jbtnDiente54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente54ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente54;
             cod_diente = 54;
@@ -1962,7 +2257,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente54ActionPerformed
 
     private void jbtnDiente53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente53ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente53;
             cod_diente = 53;
@@ -1974,7 +2269,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente53ActionPerformed
 
     private void jbtnDiente52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente52ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente52;
             cod_diente = 52;
@@ -1986,7 +2281,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente52ActionPerformed
 
     private void jbtnDiente51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente51ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente51;
             cod_diente = 51;
@@ -1998,7 +2293,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente51ActionPerformed
 
     private void jbtnDiente85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente85ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente85;
             cod_diente = 85;
@@ -2010,7 +2305,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente85ActionPerformed
 
     private void jbtnDiente84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente84ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente84;
             cod_diente = 84;
@@ -2022,7 +2317,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente84ActionPerformed
 
     private void jbtnDiente83ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente83ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente83;
             cod_diente = 83;
@@ -2034,7 +2329,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente83ActionPerformed
 
     private void jbtnDiente82ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente82ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente82;
             cod_diente = 82;
@@ -2046,7 +2341,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente82ActionPerformed
 
     private void jbtnDiente81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente81ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente81;
             cod_diente = 81;
@@ -2058,7 +2353,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente81ActionPerformed
 
     private void jbtnDiente48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente48ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente48;
             cod_diente = 48;
@@ -2070,7 +2365,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente48ActionPerformed
 
     private void jbtnDiente47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente47ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente47;
             cod_diente = 47;
@@ -2082,7 +2377,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente47ActionPerformed
 
     private void jbtnDiente46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente46ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente46;
             cod_diente = 46;
@@ -2094,7 +2389,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente46ActionPerformed
 
     private void jbtnDiente45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente45ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente45;
             cod_diente = 45;
@@ -2106,7 +2401,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente45ActionPerformed
 
     private void jbtnDiente44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente44ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente44;
             cod_diente = 44;
@@ -2118,7 +2413,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente44ActionPerformed
 
     private void jbtnDiente43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente43ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente43;
             cod_diente = 43;
@@ -2130,7 +2425,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente43ActionPerformed
 
     private void jbtnDiente42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente42ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente42;
             cod_diente = 42;
@@ -2142,7 +2437,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente42ActionPerformed
 
     private void jbtnDiente41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente41ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente41;
             cod_diente = 41;
@@ -2154,7 +2449,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente41ActionPerformed
 
     private void jbtnDiente21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente21ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente21;
             cod_diente = 21;
@@ -2166,7 +2461,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente21ActionPerformed
 
     private void jbtnDiente22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente22ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente22;
             cod_diente = 22;
@@ -2178,7 +2473,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente22ActionPerformed
 
     private void jbtnDiente23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente23ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente23;
             cod_diente = 23;
@@ -2190,7 +2485,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente23ActionPerformed
 
     private void jbtnDiente24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente24ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente24;
             cod_diente = 24;
@@ -2202,7 +2497,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente24ActionPerformed
 
     private void jbtnDiente25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente25ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente25;
             cod_diente = 25;
@@ -2214,7 +2509,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente25ActionPerformed
 
     private void jbtnDiente26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente26ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente26;
             cod_diente = 26;
@@ -2226,7 +2521,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente26ActionPerformed
 
     private void jbtnDiente27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente27ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente27;
             cod_diente = 27;
@@ -2238,7 +2533,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente27ActionPerformed
 
     private void jbtnDiente28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente28ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente28;
             cod_diente = 28;
@@ -2250,7 +2545,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente28ActionPerformed
 
     private void jbtnDiente61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente61ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente61;
             cod_diente = 61;
@@ -2262,7 +2557,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente61ActionPerformed
 
     private void jbtnDiente62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente62ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente62;
             cod_diente = 62;
@@ -2274,7 +2569,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente62ActionPerformed
 
     private void jbtnDiente63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente63ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente63;
             cod_diente = 63;
@@ -2286,7 +2581,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente63ActionPerformed
 
     private void jbtnDiente64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente64ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente64;
             cod_diente = 64;
@@ -2298,7 +2593,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente64ActionPerformed
 
     private void jbtnDiente65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente65ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente65;
             cod_diente = 65;
@@ -2310,7 +2605,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente65ActionPerformed
 
     private void jbtnDiente71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente71ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente71;
             cod_diente = 71;
@@ -2322,7 +2617,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente71ActionPerformed
 
     private void jbtnDiente72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente72ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente72;
             cod_diente = 72;
@@ -2334,7 +2629,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente72ActionPerformed
 
     private void jbtnDiente73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente73ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente73;
             cod_diente = 73;
@@ -2346,7 +2641,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente73ActionPerformed
 
     private void jbtnDiente74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente74ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente74;
             cod_diente = 74;
@@ -2358,7 +2653,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente74ActionPerformed
 
     private void jbtnDiente75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente75ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente75;
             cod_diente = 75;
@@ -2370,7 +2665,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente75ActionPerformed
 
     private void jbtnDiente31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente31ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente31;
             cod_diente = 31;
@@ -2382,7 +2677,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente31ActionPerformed
 
     private void jbtnDiente32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente32ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente32;
             cod_diente = 32;
@@ -2394,7 +2689,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente32ActionPerformed
 
     private void jbtnDiente33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente33ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente33;
             cod_diente = 33;
@@ -2406,7 +2701,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente33ActionPerformed
 
     private void jbtnDiente34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente34ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente34;
             cod_diente = 34;
@@ -2418,7 +2713,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente34ActionPerformed
 
     private void jbtnDiente35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente35ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente35;
             cod_diente = 35;
@@ -2430,7 +2725,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente35ActionPerformed
 
     private void jbtnDiente36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente36ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente36;
             cod_diente = 36;
@@ -2442,7 +2737,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente36ActionPerformed
 
     private void jbtnDiente37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente37ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente37;
             cod_diente = 37;
@@ -2454,7 +2749,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente37ActionPerformed
 
     private void jbtnDiente38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente38ActionPerformed
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             llamarDialogo();
             jButton = jbtnDiente38;
             cod_diente = 38;
@@ -2466,24 +2761,34 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnDiente38ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        this.Amalgama = true;
         this.carie = false;
+        this.Obturacion = true;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jchbLInternoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchbLInternoActionPerformed
-        if (this.jchbLInterno.isSelected()) {
-            crear = new Crear(jpnlDienteCarie, jbtnDienteCarie);
-            crear.Nuevo_Objeto("../Iconos/carieLderecho.png", cod_diente);
-        } else {
-            for (int i = 0; i < jpnlDienteCarie.getComponentCount(); i++) {
-                if (jpnlDienteCarie.getComponent(i).getName() != null) {
-                    if (jpnlDienteCarie.getComponent(i).getName().equals("carieLderechoDiente" + cod_diente)) {
-                        jpnlDienteCarie.getComponent(i).setVisible(false);
-                    }
-                }
-            }
-        }// TODO add your handling code here:
+        ImagenTrastorno("LInterno", jbtnDienteCarie, jpnlDienteCarie);// TODO add your handling code here:
     }//GEN-LAST:event_jchbLInternoActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -2501,64 +2806,567 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jchbCentroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchbCentroActionPerformed
-        if (this.jchbCentro.isSelected()) {
-            crear = new Crear(jpnlDienteCarie, jbtnDienteCarie);
-            crear.Nuevo_Objeto("../Iconos/cariecentro.png", cod_diente);
-        } else {
-            for (int i = 0; i < jpnlDienteCarie.getComponentCount(); i++) {
-                if (jpnlDienteCarie.getComponent(i).getName() != null) {
-                    if (jpnlDienteCarie.getComponent(i).getName().equals("cariecentroDiente" + cod_diente)) {
-                        jpnlDienteCarie.getComponent(i).setVisible(false);
-                    }
-                }
-            }
-        }// TODO add your handling code here:
+        ImagenTrastorno("Centro", jbtnDienteCarie, jpnlDienteCarie);
     }//GEN-LAST:event_jchbCentroActionPerformed
 
+
     private void jchbLExternoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchbLExternoActionPerformed
-        if (this.jchbLExterno.isSelected()) {
-            crear = new Crear(jpnlDienteCarie, jbtnDienteCarie);
-            crear.Nuevo_Objeto("../Iconos/carieLizquierdo.png", cod_diente);
-        } else {
-            for (int i = 0; i < jpnlDienteCarie.getComponentCount(); i++) {
-                if (jpnlDienteCarie.getComponent(i).getName() != null) {
-                    if (jpnlDienteCarie.getComponent(i).getName().equals("carieLizquierdoDiente" + cod_diente)) {
-                        jpnlDienteCarie.getComponent(i).setVisible(false);
-                    }
-                }
-            }
-        }// TODO add your handling code here:
+        ImagenTrastorno("LExterno", jbtnDienteCarie, jpnlDienteCarie);// TODO add your handling code here:
     }//GEN-LAST:event_jchbLExternoActionPerformed
 
     private void jchbPFrontalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchbPFrontalActionPerformed
-        if (this.jchbPFrontal.isSelected()) {
-            crear = new Crear(jpnlDienteCarie, jbtnDienteCarie);
-                crear.Nuevo_Objeto("../Iconos/cariesuperior.png", cod_diente);
-        } else {
-            for (int i = 0; i < jpnlDienteCarie.getComponentCount(); i++) {
-                if (jpnlDienteCarie.getComponent(i).getName() != null) {
-                    if (jpnlDienteCarie.getComponent(i).getName().equals("cariesuperiorDiente" + cod_diente)) {
-                        jpnlDienteCarie.getComponent(i).setVisible(false);
-                    }
-                }
-            }
-        }// TODO add your handling code here:
+        ImagenTrastorno("PFrontal", jbtnDienteCarie, jpnlDienteCarie);// TODO add your handling code here:
     }//GEN-LAST:event_jchbPFrontalActionPerformed
 
     private void jchbPTraceraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchbPTraceraActionPerformed
-        if (this.jchbPTracera.isSelected()) {
-            crear = new Crear(jpnlDienteCarie, jbtnDienteCarie);
-                crear.Nuevo_Objeto("../Iconos/carieinferior.png", cod_diente);
-        } else {
-            for (int i = 0; i < jpnlDienteCarie.getComponentCount(); i++) {
-                if (jpnlDienteCarie.getComponent(i).getName() != null) {
-                    if (jpnlDienteCarie.getComponent(i).getName().equals("carieinferiorDiente" + cod_diente)) {
-                        jpnlDienteCarie.getComponent(i).setVisible(false);
-                    }
-                }
-            }
-        }// TODO add your handling code here:
+        ImagenTrastorno("PTracera", jbtnDienteCarie, jpnlDienteCarie);// TODO add your handling code here:
     }//GEN-LAST:event_jchbPTraceraActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = true;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = true;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = true;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = true;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = true;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = true;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = true;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = true;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = true;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = true;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = true;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = true;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = true;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = true;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = true;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = true;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = true;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = true;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = true;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = true;
+        this.IonometroDeVidrio = false;
+    }//GEN-LAST:event_jButton23ActionPerformed
+
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = true;
+    }//GEN-LAST:event_jButton24ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2597,8 +3405,29 @@ public class Odontograma extends javax.swing.JFrame {
     private javax.swing.Box.Filler filler2;
     private javax.swing.Box.Filler filler3;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton24;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
@@ -2727,30 +3556,54 @@ public class Odontograma extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void Trastornos(JButton jbtnDiente, JPanel jpnlDiente) {
-        if (carie) {
+        if (carie || Obturacion || Trauma || Recurrente || ExodonciaIndicada || ExodonciaRealizada || ConSellante || NecesitaSellante) {
             if (this.jchbCentro.isSelected()) {
-                crear = new Crear(jpnlDiente, jbtnDiente);
-                crear.Nuevo_Objeto("../Iconos/cariecentro.png", cod_diente);
+                Posiciones("centro", jbtnDiente, jpnlDiente);
             }
             if (this.jchbLExterno.isSelected()) {
-                crear = new Crear(jpnlDiente, jbtnDiente);
-                crear.Nuevo_Objeto("../Iconos/carieLizquierdo.png", cod_diente);
+                Posiciones("Lizquierdo", jbtnDiente, jpnlDiente);
             }
             if (this.jchbLInterno.isSelected()) {
-                crear = new Crear(jpnlDiente, jbtnDiente);
-                crear.Nuevo_Objeto("../Iconos/carieLderecho.png", cod_diente);
+                Posiciones("Lderecho", jbtnDiente, jpnlDiente);
             }
             if (this.jchbPFrontal.isSelected()) {
-                crear = new Crear(jpnlDiente, jbtnDiente);
-                crear.Nuevo_Objeto("../Iconos/cariesuperior.png", cod_diente);
+                Posiciones("superior", jbtnDiente, jpnlDiente);
             }
             if (this.jchbPTracera.isSelected()) {
-                crear = new Crear(jpnlDiente, jbtnDiente);
-                crear.Nuevo_Objeto("../Iconos/carieinferior.png", cod_diente);
+                Posiciones("inferior", jbtnDiente, jpnlDiente);
             }
-        } else if (Amalgama) {
-            crear = new Crear(jpnlDiente, jbtnDiente);
-            crear.Nuevo_Objeto("../Iconos/amalgama.png", 0);
+        } else {
+            if (ConEndodoncia) {
+                Imagen("ConEndodoncia", jbtnDiente, jpnlDiente);
+            } else if (NecesitaEndodoncia) {
+                Imagen("NecesitaEndodoncia", jbtnDiente, jpnlDiente);
+            } else if (CoronaBuena) {
+                Imagen("CoronaBuena", jbtnDiente, jpnlDiente);
+            } else if (CoronaARealizar) {
+                Imagen("CoronaARealizar", jbtnDiente, jpnlDiente);
+            } else if (Abracion) {
+                Imagen("Abracion", jbtnDiente, jpnlDiente);
+            } else if (Atricion) {
+                Imagen("Atricion", jbtnDiente, jpnlDiente);
+            } else if (DienteAusente) {
+                Imagen("DienteAusente", jbtnDiente, jpnlDiente);
+            } else if (SinErupcionar) {
+                Imagen("SinErupcionar", jbtnDiente, jpnlDiente);
+            } else if (SemiIncluido) {
+                Imagen("SemiIncluido", jbtnDiente, jpnlDiente);
+            } else if (IonometroDeVidrio) {
+                Imagen("IonometroDeVidrio", jbtnDiente, jpnlDiente);
+            } else if (ResinaFisica) {
+                Imagen("ResinaFisica", jbtnDiente, jpnlDiente);
+            } else if (Provisional) {
+                Imagen("Provisional", jbtnDiente, jpnlDiente);
+            } else if (Giroversion) {
+                Imagen("Giroversion", jbtnDiente, jpnlDiente);
+            } else if (NucleoBueno) {
+                Imagen("NucleoBueno", jbtnDiente, jpnlDiente);
+            } else if (NucleoARealizar) {
+                Imagen("NucleoARealizar", jbtnDiente, jpnlDiente);
+            }
         }
     }
 
@@ -2769,5 +3622,68 @@ public class Odontograma extends javax.swing.JFrame {
         jDialog1.setVisible(true);
         jDialog1.setLocation((screenSize.width - frameSize.width) / 2,
                 (screenSize.height - frameSize.height) / 2);
+    }
+
+    private void ImagenTrastorno(String Pos, JButton jbtnDiente, JPanel jpnlDiente) {
+        if (null != Pos) {
+            switch (Pos) {
+                case "Centro":
+                    Posiciones("centro", jbtnDiente, jpnlDiente);
+                    break;
+                case "LInterno":
+                    Posiciones("Lderecho", jbtnDiente, jpnlDiente);
+                    break;
+                case "LExterno":
+                    Posiciones("Lizquierdo", jbtnDiente, jpnlDiente);
+                    break;
+                case "PTracera":
+                    Posiciones("inferior", jbtnDiente, jpnlDiente);
+                    break;
+                case "PFrontal":
+                    Posiciones("superior", jbtnDiente, jpnlDiente);
+                    break;
+            }
+        }
+
+    }
+
+    private void Posiciones(String pos, JButton jbtnDiente, JPanel jpnlDiente) {
+        if (carie) {
+            ImagePosiscion("carie", pos, jbtnDiente, jpnlDiente);
+        } else if (ConSellante) {
+            ImagePosiscion("ConSellante", pos, jbtnDiente, jpnlDiente);
+        } else if (ExodonciaIndicada) {
+            ImagePosiscion("ExodonciaIndicada", pos, jbtnDiente, jpnlDiente);
+        } else if (ExodonciaRealizada) {
+            ImagePosiscion("ExodonciaRealizada", pos, jbtnDiente, jpnlDiente);
+        } else if (Obturacion) {
+            ImagePosiscion("Obturacion", pos, jbtnDiente, jpnlDiente);
+        } else if (Recurrente) {
+            ImagePosiscion("recurrente", pos, jbtnDiente, jpnlDiente);
+        } else if (Trauma) {
+            ImagePosiscion("Trauma", pos, jbtnDiente, jpnlDiente);
+        } else if (NecesitaSellante) {
+            ImagePosiscion("NecesitaSellante", pos, jbtnDiente, jpnlDiente);
+        }
+    }
+
+    private void ImagePosiscion(String TraumaAplicado, String Pos, JButton jbtnDiente, JPanel jpnlDiente) {
+        if (this.jchbCentro.isSelected()) {
+            crear = new Crear(jpnlDiente, jbtnDiente);
+            crear.Nuevo_Objeto("../Iconos/" + TraumaAplicado + Pos + ".png", cod_diente);
+        } else {
+            for (int i = 0; i < jpnlDiente.getComponentCount(); i++) {
+                if (jpnlDiente.getComponent(i).getName() != null) {
+                    if (jpnlDiente.getComponent(i).getName().equals(TraumaAplicado + Pos + "Diente" + cod_diente)) {
+                        jpnlDiente.getComponent(i).setVisible(false);
+                    }
+                }
+            }
+        }
+    }
+
+    private void Imagen(String TraumaAplicado, JButton jbtnDiente, JPanel jpnlDiente) {
+        crear = new Crear(jpnlDiente, jbtnDiente);
+        crear.Nuevo_Objeto("../Iconos/" + TraumaAplicado + ".png", cod_diente);
     }
 }
