@@ -5,6 +5,8 @@
  */
 package odontología;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
@@ -16,7 +18,9 @@ public class Odontograma extends javax.swing.JFrame {
 
     public boolean carie;
     public boolean Amalgama;
-
+    public JPanel jPanel;
+    public JButton jButton;
+    public int cod_diente;
     Crear crear;
 
     /**
@@ -35,6 +39,16 @@ public class Odontograma extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDialog1 = new javax.swing.JDialog();
+        jpnlPosicionCarie = new javax.swing.JPanel();
+        jchbCentro = new javax.swing.JCheckBox();
+        jchbLInterno = new javax.swing.JCheckBox();
+        jchbLExterno = new javax.swing.JCheckBox();
+        jchbPFrontal = new javax.swing.JCheckBox();
+        jchbPTracera = new javax.swing.JCheckBox();
+        jButton4 = new javax.swing.JButton();
+        jpnlDienteCarie = new javax.swing.JPanel();
+        jbtnDienteCarie = new javax.swing.JButton();
         jpnlOdontograma = new javax.swing.JPanel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
         filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(2, 0), new java.awt.Dimension(2, 0), new java.awt.Dimension(2, 32767));
@@ -157,6 +171,131 @@ public class Odontograma extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
+        jpnlPosicionCarie.setBorder(javax.swing.BorderFactory.createTitledBorder("Posicion de la Carie"));
+
+        jchbCentro.setText("Centro");
+        jchbCentro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jchbCentroActionPerformed(evt);
+            }
+        });
+
+        jchbLInterno.setText("Lateral Interno");
+        jchbLInterno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jchbLInternoActionPerformed(evt);
+            }
+        });
+
+        jchbLExterno.setText("Lateral Externo");
+        jchbLExterno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jchbLExternoActionPerformed(evt);
+            }
+        });
+
+        jchbPFrontal.setText("Parte Frontal");
+        jchbPFrontal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jchbPFrontalActionPerformed(evt);
+            }
+        });
+
+        jchbPTracera.setText("Parte Tracera");
+        jchbPTracera.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jchbPTraceraActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("Registrar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jpnlPosicionCarieLayout = new javax.swing.GroupLayout(jpnlPosicionCarie);
+        jpnlPosicionCarie.setLayout(jpnlPosicionCarieLayout);
+        jpnlPosicionCarieLayout.setHorizontalGroup(
+            jpnlPosicionCarieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpnlPosicionCarieLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(jpnlPosicionCarieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jchbPTracera)
+                    .addComponent(jchbPFrontal)
+                    .addComponent(jchbLExterno)
+                    .addComponent(jchbLInterno)
+                    .addComponent(jchbCentro))
+                .addContainerGap(179, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlPosicionCarieLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton4)
+                .addGap(55, 55, 55))
+        );
+        jpnlPosicionCarieLayout.setVerticalGroup(
+            jpnlPosicionCarieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpnlPosicionCarieLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jchbCentro)
+                .addGap(10, 10, 10)
+                .addComponent(jchbLInterno)
+                .addGap(10, 10, 10)
+                .addComponent(jchbLExterno)
+                .addGap(10, 10, 10)
+                .addComponent(jchbPFrontal)
+                .addGap(10, 10, 10)
+                .addComponent(jchbPTracera)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jpnlDienteCarie.setBorder(javax.swing.BorderFactory.createTitledBorder("Diente"));
+
+        jbtnDienteCarie.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Diente.png"))); // NOI18N
+        jbtnDienteCarie.setBorderPainted(false);
+        jbtnDienteCarie.setContentAreaFilled(false);
+        jbtnDienteCarie.setPreferredSize(new java.awt.Dimension(36, 36));
+
+        javax.swing.GroupLayout jpnlDienteCarieLayout = new javax.swing.GroupLayout(jpnlDienteCarie);
+        jpnlDienteCarie.setLayout(jpnlDienteCarieLayout);
+        jpnlDienteCarieLayout.setHorizontalGroup(
+            jpnlDienteCarieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlDienteCarieLayout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addComponent(jbtnDienteCarie, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55))
+        );
+        jpnlDienteCarieLayout.setVerticalGroup(
+            jpnlDienteCarieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpnlDienteCarieLayout.createSequentialGroup()
+                .addGap(85, 85, 85)
+                .addComponent(jbtnDienteCarie, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(85, 85, 85))
+        );
+
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jpnlDienteCarie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jpnlPosicionCarie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog1Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jpnlDienteCarie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jpnlPosicionCarie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jpnlOdontograma.setBackground(new java.awt.Color(255, 255, 255));
@@ -178,7 +317,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente11.setContentAreaFilled(false);
         jbtnDiente11.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente11.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente11.setOpaque(false);
         jbtnDiente11.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,7 +331,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente12.setContentAreaFilled(false);
         jbtnDiente12.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente12.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente12.setOpaque(false);
         jbtnDiente12.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -208,7 +345,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente13.setContentAreaFilled(false);
         jbtnDiente13.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente13.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente13.setOpaque(false);
         jbtnDiente13.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,7 +359,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente14.setContentAreaFilled(false);
         jbtnDiente14.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente14.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente14.setOpaque(false);
         jbtnDiente14.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -238,7 +373,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente15.setContentAreaFilled(false);
         jbtnDiente15.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente15.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente15.setOpaque(false);
         jbtnDiente15.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,7 +387,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente16.setContentAreaFilled(false);
         jbtnDiente16.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente16.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente16.setOpaque(false);
         jbtnDiente16.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -268,7 +401,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente17.setContentAreaFilled(false);
         jbtnDiente17.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente17.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente17.setOpaque(false);
         jbtnDiente17.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -393,7 +525,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente51.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jbtnDiente51.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente51.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente51.setOpaque(false);
         jbtnDiente51.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente51.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -409,7 +540,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente52.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jbtnDiente52.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente52.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente52.setOpaque(false);
         jbtnDiente52.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente52.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -425,7 +555,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente53.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jbtnDiente53.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente53.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente53.setOpaque(false);
         jbtnDiente53.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente53.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -441,7 +570,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente54.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jbtnDiente54.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente54.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente54.setOpaque(false);
         jbtnDiente54.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente54.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -457,7 +585,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente55.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jbtnDiente55.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente55.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente55.setOpaque(false);
         jbtnDiente55.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -539,7 +666,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente81.setContentAreaFilled(false);
         jbtnDiente81.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente81.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente81.setOpaque(false);
         jbtnDiente81.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente81.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -554,7 +680,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente82.setContentAreaFilled(false);
         jbtnDiente82.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente82.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente82.setOpaque(false);
         jbtnDiente82.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente82.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -569,7 +694,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente83.setContentAreaFilled(false);
         jbtnDiente83.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente83.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente83.setOpaque(false);
         jbtnDiente83.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente83.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -584,7 +708,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente84.setContentAreaFilled(false);
         jbtnDiente84.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente84.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente84.setOpaque(false);
         jbtnDiente84.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente84.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -599,7 +722,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente85.setContentAreaFilled(false);
         jbtnDiente85.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente85.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente85.setOpaque(false);
         jbtnDiente85.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente85.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -681,7 +803,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente41.setContentAreaFilled(false);
         jbtnDiente41.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente41.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente41.setOpaque(false);
         jbtnDiente41.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente41.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -696,7 +817,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente42.setContentAreaFilled(false);
         jbtnDiente42.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente42.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente42.setOpaque(false);
         jbtnDiente42.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente42.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -711,7 +831,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente43.setContentAreaFilled(false);
         jbtnDiente43.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente43.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente43.setOpaque(false);
         jbtnDiente43.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente43.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -726,7 +845,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente44.setContentAreaFilled(false);
         jbtnDiente44.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente44.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente44.setOpaque(false);
         jbtnDiente44.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente44.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -741,7 +859,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente45.setContentAreaFilled(false);
         jbtnDiente45.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente45.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente45.setOpaque(false);
         jbtnDiente45.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente45.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -756,7 +873,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente46.setContentAreaFilled(false);
         jbtnDiente46.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente46.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente46.setOpaque(false);
         jbtnDiente46.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente46.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -771,7 +887,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente47.setContentAreaFilled(false);
         jbtnDiente47.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente47.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente47.setOpaque(false);
         jbtnDiente47.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente47.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -786,7 +901,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente48.setContentAreaFilled(false);
         jbtnDiente48.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente48.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente48.setOpaque(false);
         jbtnDiente48.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente48.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -898,7 +1012,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente28.setContentAreaFilled(false);
         jbtnDiente28.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente28.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente28.setOpaque(false);
         jbtnDiente28.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente28.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -913,7 +1026,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente27.setContentAreaFilled(false);
         jbtnDiente27.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente27.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente27.setOpaque(false);
         jbtnDiente27.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -928,7 +1040,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente26.setContentAreaFilled(false);
         jbtnDiente26.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente26.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente26.setOpaque(false);
         jbtnDiente26.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -943,7 +1054,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente25.setContentAreaFilled(false);
         jbtnDiente25.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente25.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente25.setOpaque(false);
         jbtnDiente25.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -958,7 +1068,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente24.setContentAreaFilled(false);
         jbtnDiente24.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente24.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente24.setOpaque(false);
         jbtnDiente24.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -973,7 +1082,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente23.setContentAreaFilled(false);
         jbtnDiente23.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente23.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente23.setOpaque(false);
         jbtnDiente23.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -988,7 +1096,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente22.setContentAreaFilled(false);
         jbtnDiente22.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente22.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente22.setOpaque(false);
         jbtnDiente22.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1003,7 +1110,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente21.setContentAreaFilled(false);
         jbtnDiente21.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente21.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente21.setOpaque(false);
         jbtnDiente21.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1036,7 +1142,6 @@ public class Odontograma extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlDiente21_28Layout.createSequentialGroup()
                         .addComponent(jlblDiente23)
                         .addGap(11, 11, 11)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jpnlDiente21_28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jbtnDiente24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlDiente21_28Layout.createSequentialGroup()
@@ -1114,7 +1219,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente65.setContentAreaFilled(false);
         jbtnDiente65.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente65.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente65.setOpaque(false);
         jbtnDiente65.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente65.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1129,7 +1233,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente64.setContentAreaFilled(false);
         jbtnDiente64.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente64.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente64.setOpaque(false);
         jbtnDiente64.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente64.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1144,7 +1247,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente63.setContentAreaFilled(false);
         jbtnDiente63.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente63.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente63.setOpaque(false);
         jbtnDiente63.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente63.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1159,7 +1261,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente62.setContentAreaFilled(false);
         jbtnDiente62.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente62.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente62.setOpaque(false);
         jbtnDiente62.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente62.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1174,7 +1275,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente61.setContentAreaFilled(false);
         jbtnDiente61.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente61.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente61.setOpaque(false);
         jbtnDiente61.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente61.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1256,7 +1356,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente75.setContentAreaFilled(false);
         jbtnDiente75.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente75.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente75.setOpaque(false);
         jbtnDiente75.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente75.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1271,7 +1370,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente74.setContentAreaFilled(false);
         jbtnDiente74.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente74.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente74.setOpaque(false);
         jbtnDiente74.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente74.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1286,7 +1384,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente73.setContentAreaFilled(false);
         jbtnDiente73.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente73.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente73.setOpaque(false);
         jbtnDiente73.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente73.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1301,7 +1398,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente72.setContentAreaFilled(false);
         jbtnDiente72.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente72.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente72.setOpaque(false);
         jbtnDiente72.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente72.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1316,7 +1412,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente71.setContentAreaFilled(false);
         jbtnDiente71.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente71.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente71.setOpaque(false);
         jbtnDiente71.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente71.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1398,7 +1493,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente38.setContentAreaFilled(false);
         jbtnDiente38.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente38.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente38.setOpaque(false);
         jbtnDiente38.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente38.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1413,7 +1507,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente37.setContentAreaFilled(false);
         jbtnDiente37.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente37.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente37.setOpaque(false);
         jbtnDiente37.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente37.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1428,7 +1521,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente36.setContentAreaFilled(false);
         jbtnDiente36.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente36.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente36.setOpaque(false);
         jbtnDiente36.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente36.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1443,7 +1535,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente35.setContentAreaFilled(false);
         jbtnDiente35.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente35.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente35.setOpaque(false);
         jbtnDiente35.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente35.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1458,7 +1549,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente34.setContentAreaFilled(false);
         jbtnDiente34.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente34.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente34.setOpaque(false);
         jbtnDiente34.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente34.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1473,7 +1563,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente33.setContentAreaFilled(false);
         jbtnDiente33.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente33.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente33.setOpaque(false);
         jbtnDiente33.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente33.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1488,7 +1577,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente32.setContentAreaFilled(false);
         jbtnDiente32.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente32.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente32.setOpaque(false);
         jbtnDiente32.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1503,7 +1591,6 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnDiente31.setContentAreaFilled(false);
         jbtnDiente31.setMaximumSize(new java.awt.Dimension(36, 36));
         jbtnDiente31.setMinimumSize(new java.awt.Dimension(36, 36));
-        jbtnDiente31.setOpaque(false);
         jbtnDiente31.setPreferredSize(new java.awt.Dimension(36, 36));
         jbtnDiente31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1751,7 +1838,14 @@ public class Odontograma extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtnDiente18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente18ActionPerformed
-        Trastornos(jbtnDiente18, jpnlDiente11_18);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente18;
+            cod_diente = 18;
+            jPanel = jpnlDiente11_18;
+        } else {
+            Trastornos(jbtnDiente18, jpnlDiente11_18);
+        }
     }//GEN-LAST:event_jbtnDiente18ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -1760,257 +1854,614 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jbtnDiente17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente17ActionPerformed
-        Trastornos(jbtnDiente17, jpnlDiente11_18);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente17;
+            cod_diente = 17;
+            jPanel = jpnlDiente11_18;
+        } else {
+            Trastornos(jbtnDiente17, jpnlDiente11_18);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente17ActionPerformed
 
     private void jbtnDiente16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente16ActionPerformed
-        Trastornos(jbtnDiente16, jpnlDiente11_18);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente16;
+            cod_diente = 16;
+            jPanel = jpnlDiente11_18;
+        } else {
+            Trastornos(jbtnDiente16, jpnlDiente11_18);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente16ActionPerformed
 
     private void jbtnDiente15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente15ActionPerformed
-        Trastornos(jbtnDiente15, jpnlDiente11_18);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente15;
+            cod_diente = 15;
+            jPanel = jpnlDiente11_18;
+        } else {
+            Trastornos(jbtnDiente15, jpnlDiente11_18);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente15ActionPerformed
 
     private void jbtnDiente14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente14ActionPerformed
-        Trastornos(jbtnDiente14, jpnlDiente11_18);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente14;
+            cod_diente = 14;
+            jPanel = jpnlDiente11_18;
+        } else {
+            Trastornos(jbtnDiente14, jpnlDiente11_18);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente14ActionPerformed
 
     private void jbtnDiente13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente13ActionPerformed
-        Trastornos(jbtnDiente13, jpnlDiente11_18);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente13;
+            cod_diente = 13;
+            jPanel = jpnlDiente11_18;
+        } else {
+            Trastornos(jbtnDiente13, jpnlDiente11_18);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente13ActionPerformed
 
     private void jbtnDiente12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente12ActionPerformed
-        Trastornos(jbtnDiente12, jpnlDiente11_18);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente12;
+            cod_diente = 12;
+            jPanel = jpnlDiente11_18;
+        } else {
+            Trastornos(jbtnDiente12, jpnlDiente11_18);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente12ActionPerformed
 
     private void jbtnDiente11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente11ActionPerformed
-        Trastornos(jbtnDiente11, jpnlDiente11_18);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente11;
+            cod_diente = 11;
+            jPanel = jpnlDiente11_18;
+        } else {
+            Trastornos(jbtnDiente11, jpnlDiente11_18);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente11ActionPerformed
 
     private void jbtnDiente55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente55ActionPerformed
-        Trastornos(jbtnDiente55, jpnlDiente51_55);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente55;
+            cod_diente = 55;
+            jPanel = jpnlDiente51_55;
+        } else {
+            Trastornos(jbtnDiente55, jpnlDiente51_55);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente55ActionPerformed
 
     private void jbtnDiente54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente54ActionPerformed
-        Trastornos(jbtnDiente54, jpnlDiente51_55);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente54;
+            cod_diente = 54;
+            jPanel = jpnlDiente51_55;
+        } else {
+            Trastornos(jbtnDiente54, jpnlDiente51_55);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente54ActionPerformed
 
     private void jbtnDiente53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente53ActionPerformed
-        Trastornos(jbtnDiente53, jpnlDiente51_55);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente53;
+            cod_diente = 53;
+            jPanel = jpnlDiente51_55;
+        } else {
+            Trastornos(jbtnDiente53, jpnlDiente51_55);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente53ActionPerformed
 
     private void jbtnDiente52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente52ActionPerformed
-        Trastornos(jbtnDiente52, jpnlDiente51_55);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente52;
+            cod_diente = 52;
+            jPanel = jpnlDiente51_55;
+        } else {
+            Trastornos(jbtnDiente52, jpnlDiente51_55);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente52ActionPerformed
 
     private void jbtnDiente51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente51ActionPerformed
-        Trastornos(jbtnDiente51, jpnlDiente51_55);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente51;
+            cod_diente = 51;
+            jPanel = jpnlDiente51_55;
+        } else {
+            Trastornos(jbtnDiente51, jpnlDiente51_55);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente51ActionPerformed
 
     private void jbtnDiente85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente85ActionPerformed
-        Trastornos(jbtnDiente85, jpnlDiente81_85);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente85;
+            cod_diente = 85;
+            jPanel = jpnlDiente81_85;
+        } else {
+            Trastornos(jbtnDiente85, jpnlDiente81_85);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente85ActionPerformed
 
     private void jbtnDiente84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente84ActionPerformed
-        Trastornos(jbtnDiente84, jpnlDiente81_85);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente84;
+            cod_diente = 84;
+            jPanel = jpnlDiente81_85;
+        } else {
+            Trastornos(jbtnDiente84, jpnlDiente81_85);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente84ActionPerformed
 
     private void jbtnDiente83ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente83ActionPerformed
-        Trastornos(jbtnDiente83, jpnlDiente81_85);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente83;
+            cod_diente = 83;
+            jPanel = jpnlDiente81_85;
+        } else {
+            Trastornos(jbtnDiente83, jpnlDiente81_85);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente83ActionPerformed
 
     private void jbtnDiente82ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente82ActionPerformed
-        Trastornos(jbtnDiente82, jpnlDiente81_85);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente82;
+            cod_diente = 82;
+            jPanel = jpnlDiente81_85;
+        } else {
+            Trastornos(jbtnDiente82, jpnlDiente81_85);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente82ActionPerformed
 
     private void jbtnDiente81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente81ActionPerformed
-        Trastornos(jbtnDiente81, jpnlDiente81_85);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente81;
+            cod_diente = 81;
+            jPanel = jpnlDiente81_85;
+        } else {
+            Trastornos(jbtnDiente81, jpnlDiente81_85);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente81ActionPerformed
 
     private void jbtnDiente48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente48ActionPerformed
-        Trastornos(jbtnDiente48, jpnlDiente41_48);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente48;
+            cod_diente = 48;
+            jPanel = jpnlDiente41_48;
+        } else {
+            Trastornos(jbtnDiente48, jpnlDiente41_48);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente48ActionPerformed
 
     private void jbtnDiente47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente47ActionPerformed
-        Trastornos(jbtnDiente47, jpnlDiente41_48);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente47;
+            cod_diente = 47;
+            jPanel = jpnlDiente41_48;
+        } else {
+            Trastornos(jbtnDiente47, jpnlDiente41_48);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente47ActionPerformed
 
     private void jbtnDiente46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente46ActionPerformed
-        Trastornos(jbtnDiente46, jpnlDiente41_48);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente46;
+            cod_diente = 46;
+            jPanel = jpnlDiente41_48;
+        } else {
+            Trastornos(jbtnDiente46, jpnlDiente41_48);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente46ActionPerformed
 
     private void jbtnDiente45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente45ActionPerformed
-        Trastornos(jbtnDiente45, jpnlDiente41_48);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente45;
+            cod_diente = 45;
+            jPanel = jpnlDiente41_48;
+        } else {
+            Trastornos(jbtnDiente45, jpnlDiente41_48);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente45ActionPerformed
 
     private void jbtnDiente44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente44ActionPerformed
-        Trastornos(jbtnDiente44, jpnlDiente41_48);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente44;
+            cod_diente = 44;
+            jPanel = jpnlDiente41_48;
+        } else {
+            Trastornos(jbtnDiente44, jpnlDiente41_48);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente44ActionPerformed
 
     private void jbtnDiente43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente43ActionPerformed
-        Trastornos(jbtnDiente43, jpnlDiente41_48);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente43;
+            cod_diente = 43;
+            jPanel = jpnlDiente41_48;
+        } else {
+            Trastornos(jbtnDiente43, jpnlDiente41_48);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente43ActionPerformed
 
     private void jbtnDiente42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente42ActionPerformed
-        Trastornos(jbtnDiente42, jpnlDiente41_48);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente42;
+            cod_diente = 42;
+            jPanel = jpnlDiente41_48;
+        } else {
+            Trastornos(jbtnDiente42, jpnlDiente41_48);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente42ActionPerformed
 
     private void jbtnDiente41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente41ActionPerformed
-        Trastornos(jbtnDiente41, jpnlDiente41_48);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente41;
+            cod_diente = 41;
+            jPanel = jpnlDiente41_48;
+        } else {
+            Trastornos(jbtnDiente41, jpnlDiente41_48);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente41ActionPerformed
 
     private void jbtnDiente21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente21ActionPerformed
-        Trastornos(jbtnDiente21, jpnlDiente21_28);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente21;
+            cod_diente = 21;
+            jPanel = jpnlDiente21_28;
+        } else {
+            Trastornos(jbtnDiente21, jpnlDiente21_28);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente21ActionPerformed
 
     private void jbtnDiente22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente22ActionPerformed
-        Trastornos(jbtnDiente22, jpnlDiente21_28);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente22;
+            cod_diente = 22;
+            jPanel = jpnlDiente21_28;
+        } else {
+            Trastornos(jbtnDiente22, jpnlDiente21_28);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente22ActionPerformed
 
     private void jbtnDiente23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente23ActionPerformed
-        Trastornos(jbtnDiente23, jpnlDiente21_28);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente23;
+            cod_diente = 23;
+            jPanel = jpnlDiente21_28;
+        } else {
+            Trastornos(jbtnDiente23, jpnlDiente21_28);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente23ActionPerformed
 
     private void jbtnDiente24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente24ActionPerformed
-        Trastornos(jbtnDiente24, jpnlDiente21_28);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente24;
+            cod_diente = 24;
+            jPanel = jpnlDiente21_28;
+        } else {
+            Trastornos(jbtnDiente24, jpnlDiente21_28);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente24ActionPerformed
 
     private void jbtnDiente25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente25ActionPerformed
-        Trastornos(jbtnDiente25, jpnlDiente21_28);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente25;
+            cod_diente = 25;
+            jPanel = jpnlDiente21_28;
+        } else {
+            Trastornos(jbtnDiente25, jpnlDiente21_28);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente25ActionPerformed
 
     private void jbtnDiente26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente26ActionPerformed
-        Trastornos(jbtnDiente26, jpnlDiente21_28);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente26;
+            cod_diente = 26;
+            jPanel = jpnlDiente21_28;
+        } else {
+            Trastornos(jbtnDiente26, jpnlDiente21_28);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente26ActionPerformed
 
     private void jbtnDiente27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente27ActionPerformed
-        Trastornos(jbtnDiente27, jpnlDiente21_28);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente27;
+            cod_diente = 27;
+            jPanel = jpnlDiente21_28;
+        } else {
+            Trastornos(jbtnDiente27, jpnlDiente21_28);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente27ActionPerformed
 
     private void jbtnDiente28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente28ActionPerformed
-        Trastornos(jbtnDiente28, jpnlDiente21_28);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente28;
+            cod_diente = 28;
+            jPanel = jpnlDiente21_28;
+        } else {
+            Trastornos(jbtnDiente28, jpnlDiente21_28);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente28ActionPerformed
 
     private void jbtnDiente61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente61ActionPerformed
-        Trastornos(jbtnDiente61, jpnlDiente61_65);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente61;
+            cod_diente = 61;
+            jPanel = jpnlDiente61_65;
+        } else {
+            Trastornos(jbtnDiente61, jpnlDiente61_65);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente61ActionPerformed
 
     private void jbtnDiente62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente62ActionPerformed
-        Trastornos(jbtnDiente62, jpnlDiente61_65);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente62;
+            cod_diente = 62;
+            jPanel = jpnlDiente61_65;
+        } else {
+            Trastornos(jbtnDiente62, jpnlDiente61_65);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente62ActionPerformed
 
     private void jbtnDiente63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente63ActionPerformed
-        Trastornos(jbtnDiente63, jpnlDiente61_65);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente63;
+            cod_diente = 63;
+            jPanel = jpnlDiente61_65;
+        } else {
+            Trastornos(jbtnDiente63, jpnlDiente61_65);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente63ActionPerformed
 
     private void jbtnDiente64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente64ActionPerformed
-        Trastornos(jbtnDiente64, jpnlDiente61_65);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente64;
+            cod_diente = 64;
+            jPanel = jpnlDiente61_65;
+        } else {
+            Trastornos(jbtnDiente64, jpnlDiente61_65);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente64ActionPerformed
 
     private void jbtnDiente65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente65ActionPerformed
-        Trastornos(jbtnDiente65, jpnlDiente61_65);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente65;
+            cod_diente = 65;
+            jPanel = jpnlDiente61_65;
+        } else {
+            Trastornos(jbtnDiente65, jpnlDiente61_65);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente65ActionPerformed
 
     private void jbtnDiente71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente71ActionPerformed
-        Trastornos(jbtnDiente71, jpnlDiente71_75);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente71;
+            cod_diente = 71;
+            jPanel = jpnlDiente71_75;
+        } else {
+            Trastornos(jbtnDiente71, jpnlDiente71_75);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente71ActionPerformed
 
     private void jbtnDiente72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente72ActionPerformed
-        Trastornos(jbtnDiente72, jpnlDiente71_75);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente72;
+            cod_diente = 72;
+            jPanel = jpnlDiente71_75;
+        } else {
+            Trastornos(jbtnDiente72, jpnlDiente71_75);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente72ActionPerformed
 
     private void jbtnDiente73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente73ActionPerformed
-        Trastornos(jbtnDiente73, jpnlDiente71_75);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente73;
+            cod_diente = 73;
+            jPanel = jpnlDiente71_75;
+        } else {
+            Trastornos(jbtnDiente73, jpnlDiente71_75);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente73ActionPerformed
 
     private void jbtnDiente74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente74ActionPerformed
-        Trastornos(jbtnDiente74, jpnlDiente71_75);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente74;
+            cod_diente = 74;
+            jPanel = jpnlDiente71_75;
+        } else {
+            Trastornos(jbtnDiente74, jpnlDiente71_75);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente74ActionPerformed
 
     private void jbtnDiente75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente75ActionPerformed
-        Trastornos(jbtnDiente75, jpnlDiente71_75);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente75;
+            cod_diente = 75;
+            jPanel = jpnlDiente71_75;
+        } else {
+            Trastornos(jbtnDiente75, jpnlDiente71_75);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente75ActionPerformed
 
     private void jbtnDiente31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente31ActionPerformed
-        Trastornos(jbtnDiente31, jpnlDiente31_38);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente31;
+            cod_diente = 31;
+            jPanel = jpnlDiente31_38;
+        } else {
+            Trastornos(jbtnDiente31, jpnlDiente31_38);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente31ActionPerformed
 
     private void jbtnDiente32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente32ActionPerformed
-        Trastornos(jbtnDiente32, jpnlDiente31_38);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente32;
+            cod_diente = 32;
+            jPanel = jpnlDiente31_38;
+        } else {
+            Trastornos(jbtnDiente32, jpnlDiente31_38);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente32ActionPerformed
 
     private void jbtnDiente33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente33ActionPerformed
-        Trastornos(jbtnDiente33, jpnlDiente31_38);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente33;
+            cod_diente = 33;
+            jPanel = jpnlDiente31_38;
+        } else {
+            Trastornos(jbtnDiente33, jpnlDiente31_38);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente33ActionPerformed
 
     private void jbtnDiente34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente34ActionPerformed
-        Trastornos(jbtnDiente34, jpnlDiente31_38);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente34;
+            cod_diente = 34;
+            jPanel = jpnlDiente31_38;
+        } else {
+            Trastornos(jbtnDiente34, jpnlDiente31_38);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente34ActionPerformed
 
     private void jbtnDiente35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente35ActionPerformed
-        Trastornos(jbtnDiente35, jpnlDiente31_38);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente35;
+            cod_diente = 35;
+            jPanel = jpnlDiente31_38;
+        } else {
+            Trastornos(jbtnDiente35, jpnlDiente31_38);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente35ActionPerformed
 
     private void jbtnDiente36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente36ActionPerformed
-        Trastornos(jbtnDiente36, jpnlDiente31_38);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente36;
+            cod_diente = 36;
+            jPanel = jpnlDiente31_38;
+        } else {
+            Trastornos(jbtnDiente36, jpnlDiente31_38);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente36ActionPerformed
 
     private void jbtnDiente37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente37ActionPerformed
-        Trastornos(jbtnDiente37, jpnlDiente31_38);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente37;
+            cod_diente = 37;
+            jPanel = jpnlDiente31_38;
+        } else {
+            Trastornos(jbtnDiente37, jpnlDiente31_38);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente37ActionPerformed
 
     private void jbtnDiente38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDiente38ActionPerformed
-        Trastornos(jbtnDiente38, jpnlDiente31_38);
+        if (carie) {
+            llamarDialogo();
+            jButton = jbtnDiente38;
+            cod_diente = 38;
+            jPanel = jpnlDiente31_38;
+        } else {
+            Trastornos(jbtnDiente38, jpnlDiente31_38);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnDiente38ActionPerformed
 
@@ -2019,6 +2470,95 @@ public class Odontograma extends javax.swing.JFrame {
         this.carie = false;
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jchbLInternoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchbLInternoActionPerformed
+        if (this.jchbLInterno.isSelected()) {
+            crear = new Crear(jpnlDienteCarie, jbtnDienteCarie);
+            crear.Nuevo_Objeto("../Iconos/carieLderecho.png", cod_diente);
+        } else {
+            for (int i = 0; i < jpnlDienteCarie.getComponentCount(); i++) {
+                if (jpnlDienteCarie.getComponent(i).getName() != null) {
+                    if (jpnlDienteCarie.getComponent(i).getName().equals("carieLderechoDiente" + cod_diente)) {
+                        jpnlDienteCarie.getComponent(i).setVisible(false);
+                    }
+                }
+            }
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_jchbLInternoActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        Trastornos(jButton, jPanel);
+        this.jchbCentro.setSelected(false);
+        this.jchbLExterno.setSelected(false);
+        this.jchbLInterno.setSelected(false);
+        this.jchbPFrontal.setSelected(false);
+        this.jchbPTracera.setSelected(false);
+        for (int i = 0; i < jpnlDienteCarie.getComponentCount(); i++) {
+            jpnlDienteCarie.getComponent(i).setVisible(false);
+        }
+        jbtnDienteCarie.setVisible(true);
+        this.jDialog1.setVisible(false);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jchbCentroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchbCentroActionPerformed
+        if (this.jchbCentro.isSelected()) {
+            crear = new Crear(jpnlDienteCarie, jbtnDienteCarie);
+            crear.Nuevo_Objeto("../Iconos/cariecentro.png", cod_diente);
+        } else {
+            for (int i = 0; i < jpnlDienteCarie.getComponentCount(); i++) {
+                if (jpnlDienteCarie.getComponent(i).getName() != null) {
+                    if (jpnlDienteCarie.getComponent(i).getName().equals("cariecentroDiente" + cod_diente)) {
+                        jpnlDienteCarie.getComponent(i).setVisible(false);
+                    }
+                }
+            }
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_jchbCentroActionPerformed
+
+    private void jchbLExternoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchbLExternoActionPerformed
+        if (this.jchbLExterno.isSelected()) {
+            crear = new Crear(jpnlDienteCarie, jbtnDienteCarie);
+            crear.Nuevo_Objeto("../Iconos/carieLizquierdo.png", cod_diente);
+        } else {
+            for (int i = 0; i < jpnlDienteCarie.getComponentCount(); i++) {
+                if (jpnlDienteCarie.getComponent(i).getName() != null) {
+                    if (jpnlDienteCarie.getComponent(i).getName().equals("carieLizquierdoDiente" + cod_diente)) {
+                        jpnlDienteCarie.getComponent(i).setVisible(false);
+                    }
+                }
+            }
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_jchbLExternoActionPerformed
+
+    private void jchbPFrontalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchbPFrontalActionPerformed
+        if (this.jchbPFrontal.isSelected()) {
+            crear = new Crear(jpnlDienteCarie, jbtnDienteCarie);
+                crear.Nuevo_Objeto("../Iconos/cariesuperior.png", cod_diente);
+        } else {
+            for (int i = 0; i < jpnlDienteCarie.getComponentCount(); i++) {
+                if (jpnlDienteCarie.getComponent(i).getName() != null) {
+                    if (jpnlDienteCarie.getComponent(i).getName().equals("cariesuperiorDiente" + cod_diente)) {
+                        jpnlDienteCarie.getComponent(i).setVisible(false);
+                    }
+                }
+            }
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_jchbPFrontalActionPerformed
+
+    private void jchbPTraceraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchbPTraceraActionPerformed
+        if (this.jchbPTracera.isSelected()) {
+            crear = new Crear(jpnlDienteCarie, jbtnDienteCarie);
+                crear.Nuevo_Objeto("../Iconos/carieinferior.png", cod_diente);
+        } else {
+            for (int i = 0; i < jpnlDienteCarie.getComponentCount(); i++) {
+                if (jpnlDienteCarie.getComponent(i).getName() != null) {
+                    if (jpnlDienteCarie.getComponent(i).getName().equals("carieinferiorDiente" + cod_diente)) {
+                        jpnlDienteCarie.getComponent(i).setVisible(false);
+                    }
+                }
+            }
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_jchbPTraceraActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2036,19 +2576,16 @@ public class Odontograma extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Odontograma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Odontograma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Odontograma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Odontograma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
+        //</editor-fold>
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new Odontograma().setVisible(true);
             }
@@ -2061,6 +2598,8 @@ public class Odontograma extends javax.swing.JFrame {
     private javax.swing.Box.Filler filler3;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JDialog jDialog1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
@@ -2116,6 +2655,12 @@ public class Odontograma extends javax.swing.JFrame {
     private javax.swing.JButton jbtnDiente83;
     private javax.swing.JButton jbtnDiente84;
     private javax.swing.JButton jbtnDiente85;
+    private javax.swing.JButton jbtnDienteCarie;
+    private javax.swing.JCheckBox jchbCentro;
+    private javax.swing.JCheckBox jchbLExterno;
+    private javax.swing.JCheckBox jchbLInterno;
+    private javax.swing.JCheckBox jchbPFrontal;
+    private javax.swing.JCheckBox jchbPTracera;
     private javax.swing.JLabel jlblDiente11;
     private javax.swing.JLabel jlblDiente12;
     private javax.swing.JLabel jlblDiente13;
@@ -2176,19 +2721,53 @@ public class Odontograma extends javax.swing.JFrame {
     private javax.swing.JPanel jpnlDiente61_65;
     private javax.swing.JPanel jpnlDiente71_75;
     private javax.swing.JPanel jpnlDiente81_85;
+    private javax.swing.JPanel jpnlDienteCarie;
     private javax.swing.JPanel jpnlOdontograma;
+    private javax.swing.JPanel jpnlPosicionCarie;
     // End of variables declaration//GEN-END:variables
 
     private void Trastornos(JButton jbtnDiente, JPanel jpnlDiente) {
         if (carie) {
-            crear = new Crear(jpnlDiente, jbtnDiente);
-            crear.Nuevo_Objeto("../Iconos/carie.png", 0);
-        }else if (Amalgama) {
+            if (this.jchbCentro.isSelected()) {
+                crear = new Crear(jpnlDiente, jbtnDiente);
+                crear.Nuevo_Objeto("../Iconos/cariecentro.png", cod_diente);
+            }
+            if (this.jchbLExterno.isSelected()) {
+                crear = new Crear(jpnlDiente, jbtnDiente);
+                crear.Nuevo_Objeto("../Iconos/carieLizquierdo.png", cod_diente);
+            }
+            if (this.jchbLInterno.isSelected()) {
+                crear = new Crear(jpnlDiente, jbtnDiente);
+                crear.Nuevo_Objeto("../Iconos/carieLderecho.png", cod_diente);
+            }
+            if (this.jchbPFrontal.isSelected()) {
+                crear = new Crear(jpnlDiente, jbtnDiente);
+                crear.Nuevo_Objeto("../Iconos/cariesuperior.png", cod_diente);
+            }
+            if (this.jchbPTracera.isSelected()) {
+                crear = new Crear(jpnlDiente, jbtnDiente);
+                crear.Nuevo_Objeto("../Iconos/carieinferior.png", cod_diente);
+            }
+        } else if (Amalgama) {
             crear = new Crear(jpnlDiente, jbtnDiente);
             crear.Nuevo_Objeto("../Iconos/amalgama.png", 0);
         }
-{
-            
+    }
+
+    private void llamarDialogo() {
+        jDialog1.setSize(550, 300);
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        Dimension frameSize = jDialog1.getSize();
+
+        if (frameSize.height > screenSize.height) {
+            frameSize.height = screenSize.height;
         }
+
+        if (frameSize.width > screenSize.width) {
+            frameSize.width = screenSize.width;
+        }
+        jDialog1.setVisible(true);
+        jDialog1.setLocation((screenSize.width - frameSize.width) / 2,
+                (screenSize.height - frameSize.height) / 2);
     }
 }
