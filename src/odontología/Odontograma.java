@@ -215,7 +215,7 @@ public class Odontograma extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
-        jpnlPosicionCarie.setBorder(javax.swing.BorderFactory.createTitledBorder("Posicion de la Carie"));
+        jpnlPosicionCarie.setBorder(javax.swing.BorderFactory.createTitledBorder("Posicion del Trauma"));
 
         jchbCentro.setText("Centro");
         jchbCentro.addActionListener(new java.awt.event.ActionListener() {
@@ -2871,7 +2871,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jchbPFrontalActionPerformed
 
     private void jchbPTraceraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchbPTraceraActionPerformed
-        Pos = "superior";
+        Pos = "inferior";
         if (this.jchbPTracera.isSelected()) {
             crear = new Crear(jpnlDienteCarie, jbtnDienteCarie);
             crear.Nuevo_Objeto("../Iconos/" + TraumaAplicado + Pos + ".png", cod_diente);
@@ -2887,7 +2887,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jchbPTraceraActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-TraumaAplicado = "ExodonciaRealizada";
+        TraumaAplicado = "ExodonciaRealizada";
         this.carie = false;
         this.Obturacion = false;
         this.CoronaBuena = false;
@@ -2914,7 +2914,7 @@ TraumaAplicado = "ExodonciaRealizada";
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
-TraumaAplicado = "SemiIncluido";
+        TraumaAplicado = "SemiIncluido";
         this.carie = false;
         this.Obturacion = false;
         this.CoronaBuena = false;
@@ -2941,7 +2941,7 @@ TraumaAplicado = "SemiIncluido";
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-TraumaAplicado = "SinErupcionar";
+        TraumaAplicado = "SinErupcionar";
         this.carie = false;
         this.Obturacion = false;
         this.CoronaBuena = false;
@@ -3076,7 +3076,7 @@ TraumaAplicado = "SinErupcionar";
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-TraumaAplicado = "Trauma";
+        TraumaAplicado = "Trauma";
         this.carie = false;
         this.Obturacion = false;
         this.CoronaBuena = false;
@@ -3103,7 +3103,7 @@ TraumaAplicado = "Trauma";
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-TraumaAplicado = "Recurrente";
+        TraumaAplicado = "Recurrente";
         this.carie = false;
         this.Obturacion = false;
         this.CoronaBuena = false;
@@ -3130,7 +3130,7 @@ TraumaAplicado = "Recurrente";
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-TraumaAplicado = "DienteAusente";
+        TraumaAplicado = "DienteAusente";
         this.carie = false;
         this.Obturacion = false;
         this.CoronaBuena = false;
@@ -3157,7 +3157,7 @@ TraumaAplicado = "DienteAusente";
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-TraumaAplicado = "ConSellante";
+        TraumaAplicado = "ConSellante";
         this.carie = false;
         this.Obturacion = false;
         this.CoronaBuena = false;
@@ -3184,7 +3184,7 @@ TraumaAplicado = "ConSellante";
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-TraumaAplicado = "NecesitaSellante";
+        TraumaAplicado = "NecesitaSellante";
         this.carie = false;
         this.Obturacion = false;
         this.CoronaBuena = false;
@@ -3211,7 +3211,7 @@ TraumaAplicado = "NecesitaSellante";
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-TraumaAplicado = "ExodonciaIndicada";
+        TraumaAplicado = "ExodonciaIndicada";
         this.carie = false;
         this.Obturacion = false;
         this.CoronaBuena = false;
@@ -3238,7 +3238,7 @@ TraumaAplicado = "ExodonciaIndicada";
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-TraumaAplicado = "Abracion";
+        TraumaAplicado = "Abracion";
         this.carie = false;
         this.Obturacion = false;
         this.CoronaBuena = false;
@@ -3265,7 +3265,7 @@ TraumaAplicado = "Abracion";
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-TraumaAplicado = "Atricion";
+        TraumaAplicado = "Atricion";
         this.carie = false;
         this.Obturacion = false;
         this.CoronaBuena = false;
@@ -3292,7 +3292,7 @@ TraumaAplicado = "Atricion";
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
-TraumaAplicado = "NucleoBueno";
+        TraumaAplicado = "NucleoBueno";
         this.carie = false;
         this.Obturacion = false;
         this.CoronaBuena = false;
@@ -3319,7 +3319,7 @@ TraumaAplicado = "NucleoBueno";
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
-TraumaAplicado = "NucleoARealizar";
+        TraumaAplicado = "NucleoARealizar";
         this.carie = false;
         this.Obturacion = false;
         this.CoronaBuena = false;
@@ -3346,7 +3346,7 @@ TraumaAplicado = "NucleoARealizar";
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
-TraumaAplicado = "Giroversion";
+        TraumaAplicado = "Giroversion";
         this.carie = false;
         this.Obturacion = false;
         this.CoronaBuena = false;
@@ -3373,7 +3373,7 @@ TraumaAplicado = "Giroversion";
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
-TraumaAplicado = "Provisional";
+        TraumaAplicado = "Provisional";
         this.carie = false;
         this.Obturacion = false;
         this.CoronaBuena = false;
@@ -3400,7 +3400,7 @@ TraumaAplicado = "Provisional";
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
-TraumaAplicado ="ResinaFisica";
+        TraumaAplicado = "ResinaFisica";
         this.carie = false;
         this.Obturacion = false;
         this.CoronaBuena = false;
@@ -3427,7 +3427,7 @@ TraumaAplicado ="ResinaFisica";
     }//GEN-LAST:event_jButton23ActionPerformed
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
-TraumaAplicado = "IonometroDeVidrio";
+        TraumaAplicado = "IonometroDeVidrio";
         this.carie = false;
         this.Obturacion = false;
         this.CoronaBuena = false;
@@ -3763,12 +3763,12 @@ TraumaAplicado = "IonometroDeVidrio";
 
     private void Imagen(JButton jbtnDiente, JPanel jpnlDiente) {
         crear = new Crear(jpnlDiente, jbtnDiente);
-        if (Pos!="") {
-            crear.Nuevo_Objeto("../Iconos/" + TraumaAplicado + Pos+".png", cod_diente);
-            Pos="";
-        }else{
-            crear.Nuevo_Objeto("../Iconos/" + TraumaAplicado +".png", cod_diente);
+        if (!"".equals(Pos)) {
+            crear.Nuevo_Objeto("../Iconos/" + TraumaAplicado + Pos + ".png", cod_diente);
+            Pos = "";
+        } else {
+            crear.Nuevo_Objeto("../Iconos/" + TraumaAplicado + ".png", cod_diente);
         }
-        
+
     }
 }
