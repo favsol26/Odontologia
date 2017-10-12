@@ -7,7 +7,10 @@ package odontología;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.util.Collection;
+import javafx.print.Collation;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -237,6 +240,7 @@ public class Odontograma extends javax.swing.JFrame {
         jbtnIonometroDeVidrio = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
 
         jpnlPosicionCarie.setBorder(javax.swing.BorderFactory.createTitledBorder("Posicion del Trauma"));
 
@@ -2097,6 +2101,16 @@ public class Odontograma extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        jButton1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 0, 51));
+        jButton1.setText("X");
+        jButton1.setMargin(new java.awt.Insets(1, 1, 1, 1));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -2105,13 +2119,14 @@ public class Odontograma extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jpnlOdontograma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(50, 50, 50)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10))))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2120,8 +2135,13 @@ public class Odontograma extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jpnlOdontograma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jButton1)))
                 .addGap(10, 10, 10))
         );
 
@@ -3573,6 +3593,45 @@ public class Odontograma extends javax.swing.JFrame {
         this.IonometroDeVidrio = true;
     }//GEN-LAST:event_jbtnIonometroDeVidrioActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if (this.jTable1.getSelectedRow() < 0) {
+            JOptionPane.showMessageDialog(this, "Debe seleccionar al menos una fila", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            int row, dient;
+            String Traum, nombre;
+            String[] Pos;
+            row = this.jTable1.getSelectedRow();
+            dient = Integer.valueOf(this.jTable1.getValueAt(row, 0).toString());
+            Pos = this.jTable1.getValueAt(row, 2).toString().split(", ");
+            for (int i = 0; i < Pos.length; i++) {
+                switch (Pos[i]) {
+                    case "Centro":
+                        Pos[i] = "centro";
+                        break;
+                    case "Lado Interno":
+                        Pos[i] = "Lderecho";
+                        break;
+                    case "Lado Externo":
+                        Pos[i] = "Lizquierdo";
+                        break;
+                    case "Parte Tracera":
+                        Pos[i] = "inferior";
+                        break;
+                    case "Parte Frontal":
+                        Pos[i] = "superior";
+                        break;
+                }
+                Pos[i] = Pos[i].toLowerCase();
+            }
+            Traum = this.jTable1.getValueAt(row, 1).toString().replace(" ", "");
+            if (Pos.length==1 && "N/A".equals(Pos[0])) {
+                nombre = Traum.concat("Diente").concat(String.valueOf(dient));
+            }else{
+                
+            }
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3609,6 +3668,7 @@ public class Odontograma extends javax.swing.JFrame {
     private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;
     private javax.swing.Box.Filler filler3;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JPanel jPanel1;
@@ -3904,9 +3964,24 @@ public class Odontograma extends javax.swing.JFrame {
     }
 
     private void llena_Tabla() {
+        String NombreTR = "";
+        int p = 0;
         String[] Datos = new String[4];
+        for (int i = 0; i < TraumaAplicado.length(); i++) {
+            if (Character.isUpperCase(TraumaAplicado.charAt(i))) {
+                if (p == 0) {
+                    NombreTR = NombreTR.concat(TraumaAplicado.substring(0, i)).concat(" ");
+                } else {
+                    NombreTR = NombreTR.concat(TraumaAplicado.substring(p, i)).concat(" ");
+                }
+                p = i;
+            }
+            if (i + 1 == TraumaAplicado.length()) {
+                NombreTR = NombreTR.concat(TraumaAplicado.substring(p, TraumaAplicado.length()));
+            }
+        }
         Datos[0] = String.valueOf(cod_diente);
-        Datos[1] = TraumaAplicado;
+        Datos[1] = NombreTR;
         if (!Reg_Pos.isEmpty()) {
             Datos[2] = Reg_Pos;
         } else {

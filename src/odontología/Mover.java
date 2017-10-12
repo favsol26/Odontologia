@@ -55,6 +55,7 @@ public class Mover extends JLabel implements MouseListener, MouseMotionListener 
         this.setVisible(true);
         this.setLocation(posicion);
         url = url.substring(url.lastIndexOf("/")+1,url.lastIndexOf(".")).concat("Diente")+num;
+        //System.out.println(url);
         this.setName(url);
 
     }
