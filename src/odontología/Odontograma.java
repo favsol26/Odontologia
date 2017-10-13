@@ -6,9 +6,9 @@
 package odontología;
 
 import java.awt.Dimension;
+import java.awt.HeadlessException;
 import java.awt.Toolkit;
-import java.util.Collection;
-import javafx.print.Collation;
+import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -51,6 +51,7 @@ public class Odontograma extends javax.swing.JFrame {
     public String Reg_Pos = "";
     public String Reg_Estado = "";
     public String Reg_Trauma = "";
+    public String[] Posicion, llenarPos;
 
     DefaultTableModel jtbmDetalleOdontograma;
     Crear crear;
@@ -245,6 +246,7 @@ public class Odontograma extends javax.swing.JFrame {
         jpnlPosicionCarie.setBorder(javax.swing.BorderFactory.createTitledBorder("Posicion del Trauma"));
 
         jchbCentro.setText("Centro");
+        jchbCentro.setName("jchbCentro"); // NOI18N
         jchbCentro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jchbCentroActionPerformed(evt);
@@ -252,6 +254,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jchbLInterno.setText("Lateral Interno");
+        jchbLInterno.setName("jchbLInterno"); // NOI18N
         jchbLInterno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jchbLInternoActionPerformed(evt);
@@ -259,6 +262,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jchbLExterno.setText("Lateral Externo");
+        jchbLExterno.setName("jchbLExterno"); // NOI18N
         jchbLExterno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jchbLExternoActionPerformed(evt);
@@ -266,6 +270,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jchbPFrontal.setText("Parte Frontal");
+        jchbPFrontal.setName("jchbPFrontal"); // NOI18N
         jchbPFrontal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jchbPFrontalActionPerformed(evt);
@@ -273,6 +278,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jchbPTracera.setText("Parte Tracera");
+        jchbPTracera.setName("jchbPTracera"); // NOI18N
         jchbPTracera.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jchbPTraceraActionPerformed(evt);
@@ -1832,6 +1838,7 @@ public class Odontograma extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Trastorno"));
 
         jbtnCarie.setText("Carie");
+        jbtnCarie.setName("jbtnCarie"); // NOI18N
         jbtnCarie.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnCarieActionPerformed(evt);
@@ -1839,6 +1846,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnObturacion.setText("Obturación");
+        jbtnObturacion.setName("jbtnObturacion"); // NOI18N
         jbtnObturacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnObturacionActionPerformed(evt);
@@ -1846,6 +1854,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnCoronaBuena.setText("Corona Buena");
+        jbtnCoronaBuena.setName("jbtnCoronaBuena"); // NOI18N
         jbtnCoronaBuena.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnCoronaBuenaActionPerformed(evt);
@@ -1853,6 +1862,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnCoronaARealizar.setText("Corona a Realizar");
+        jbtnCoronaARealizar.setName("jbtnCoronaARealizar"); // NOI18N
         jbtnCoronaARealizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnCoronaARealizarActionPerformed(evt);
@@ -1860,6 +1870,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnConEndodoncia.setText("Con Endodoncia");
+        jbtnConEndodoncia.setName("jbtnConEndodoncia"); // NOI18N
         jbtnConEndodoncia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnConEndodonciaActionPerformed(evt);
@@ -1867,6 +1878,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnNecesitaEndodoncia.setText("Necesita Endodoncia");
+        jbtnNecesitaEndodoncia.setName("jbtnNecesitaEndodoncia"); // NOI18N
         jbtnNecesitaEndodoncia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnNecesitaEndodonciaActionPerformed(evt);
@@ -1874,6 +1886,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnTrauma.setText("Trauma");
+        jbtnTrauma.setName("jbtnTrauma"); // NOI18N
         jbtnTrauma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnTraumaActionPerformed(evt);
@@ -1881,6 +1894,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnRecurrente.setText("Recurrente");
+        jbtnRecurrente.setName("jbtnRecurrente"); // NOI18N
         jbtnRecurrente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnRecurrenteActionPerformed(evt);
@@ -1888,6 +1902,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnDienteAusente.setText("Diente Ausente");
+        jbtnDienteAusente.setName("jbtnDienteAusente"); // NOI18N
         jbtnDienteAusente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnDienteAusenteActionPerformed(evt);
@@ -1895,6 +1910,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnSinErupcionar.setText("Sin Erupcionar");
+        jbtnSinErupcionar.setName("jbtnSinErupcionar"); // NOI18N
         jbtnSinErupcionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnSinErupcionarActionPerformed(evt);
@@ -1902,6 +1918,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnConSellante.setText("Con Sellante");
+        jbtnConSellante.setName("jbtnConSellante"); // NOI18N
         jbtnConSellante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnConSellanteActionPerformed(evt);
@@ -1909,6 +1926,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnNecesitaSellante.setText("Necesita Sellante");
+        jbtnNecesitaSellante.setName("jbtnNecesitaSellante"); // NOI18N
         jbtnNecesitaSellante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnNecesitaSellanteActionPerformed(evt);
@@ -1916,13 +1934,15 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnExodonciaRealizada.setText("Exodoncia Realizada");
+        jbtnExodonciaRealizada.setName("jbtnExodonciaRealizada"); // NOI18N
         jbtnExodonciaRealizada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnExodonciaRealizadaActionPerformed(evt);
             }
         });
 
-        jbtnExodonciaIndicada.setText("Exodoncia Iniciada");
+        jbtnExodonciaIndicada.setText("Exodoncia Indicada");
+        jbtnExodonciaIndicada.setName("jbtnExodonciaIndicada"); // NOI18N
         jbtnExodonciaIndicada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnExodonciaIndicadaActionPerformed(evt);
@@ -1930,6 +1950,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnAbrasion.setText("Abracion");
+        jbtnAbrasion.setName("jbtnAbrasion"); // NOI18N
         jbtnAbrasion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnAbrasionActionPerformed(evt);
@@ -1937,6 +1958,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnAtricion.setText("Atrición");
+        jbtnAtricion.setName("jbtnAtricion"); // NOI18N
         jbtnAtricion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnAtricionActionPerformed(evt);
@@ -1944,6 +1966,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnNucleoBueno.setText("Nucleo Bueno");
+        jbtnNucleoBueno.setName("jbtnNucleoBueno"); // NOI18N
         jbtnNucleoBueno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnNucleoBuenoActionPerformed(evt);
@@ -1951,6 +1974,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnNucleoARealizar.setText("Nucleo a Realizar");
+        jbtnNucleoARealizar.setName("jbtnNucleoARealizar"); // NOI18N
         jbtnNucleoARealizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnNucleoARealizarActionPerformed(evt);
@@ -1958,6 +1982,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnSemiIncluido.setText("Semi Incluido");
+        jbtnSemiIncluido.setName("jbtnSemiIncluido"); // NOI18N
         jbtnSemiIncluido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnSemiIncluidoActionPerformed(evt);
@@ -1965,6 +1990,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnGiroversion.setText("Giroversión");
+        jbtnGiroversion.setName("jbtnGiroversion"); // NOI18N
         jbtnGiroversion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnGiroversionActionPerformed(evt);
@@ -1972,6 +1998,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnProvisional.setText("Provisional");
+        jbtnProvisional.setName("jbtnProvisional"); // NOI18N
         jbtnProvisional.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnProvisionalActionPerformed(evt);
@@ -1979,6 +2006,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnResinaFisica.setText("Resina Física");
+        jbtnResinaFisica.setName("jbtnResinaFisica"); // NOI18N
         jbtnResinaFisica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnResinaFisicaActionPerformed(evt);
@@ -1986,6 +2014,7 @@ public class Odontograma extends javax.swing.JFrame {
         });
 
         jbtnIonometroDeVidrio.setText("Ionometro de Vidrio");
+        jbtnIonometroDeVidrio.setName("jbtnIonometroDeVidrio"); // NOI18N
         jbtnIonometroDeVidrio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnIonometroDeVidrioActionPerformed(evt);
@@ -2117,15 +2146,15 @@ public class Odontograma extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jpnlOdontograma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(50, 50, 50)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -2135,13 +2164,10 @@ public class Odontograma extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jpnlOdontograma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jButton1)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
                 .addGap(10, 10, 10))
         );
 
@@ -2155,7 +2181,9 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente18;
 
             jPanel = jpnlDiente11_18;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion 
+                || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio 
+                || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente18, jpnlDiente11_18);
             llena_Tabla();
         }
@@ -2195,7 +2223,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente17;
 
             jPanel = jpnlDiente11_18;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente17, jpnlDiente11_18);
             llena_Tabla();
         }
@@ -2209,7 +2237,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente16;
 
             jPanel = jpnlDiente11_18;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente16, jpnlDiente11_18);
             llena_Tabla();
         }
@@ -2223,7 +2251,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente15;
 
             jPanel = jpnlDiente11_18;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente15, jpnlDiente11_18);
             llena_Tabla();
         }
@@ -2237,7 +2265,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente14;
 
             jPanel = jpnlDiente11_18;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente14, jpnlDiente11_18);
             llena_Tabla();
         }
@@ -2251,7 +2279,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente13;
 
             jPanel = jpnlDiente11_18;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente13, jpnlDiente11_18);
             llena_Tabla();
         }
@@ -2265,7 +2293,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente12;
 
             jPanel = jpnlDiente11_18;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente12, jpnlDiente11_18);
             llena_Tabla();
         }
@@ -2279,7 +2307,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente11;
 
             jPanel = jpnlDiente11_18;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente11, jpnlDiente11_18);
             llena_Tabla();
         }
@@ -2293,7 +2321,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente55;
 
             jPanel = jpnlDiente51_55;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente55, jpnlDiente51_55);
             llena_Tabla();
         }
@@ -2307,7 +2335,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente54;
 
             jPanel = jpnlDiente51_55;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente54, jpnlDiente51_55);
             llena_Tabla();
         }
@@ -2321,7 +2349,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente53;
 
             jPanel = jpnlDiente51_55;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente53, jpnlDiente51_55);
             llena_Tabla();
         }
@@ -2335,7 +2363,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente52;
 
             jPanel = jpnlDiente51_55;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente52, jpnlDiente51_55);
             llena_Tabla();
         }
@@ -2349,7 +2377,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente51;
 
             jPanel = jpnlDiente51_55;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente51, jpnlDiente51_55);
             llena_Tabla();
         }
@@ -2363,7 +2391,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente85;
 
             jPanel = jpnlDiente81_85;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente85, jpnlDiente81_85);
             llena_Tabla();
         }
@@ -2377,7 +2405,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente84;
 
             jPanel = jpnlDiente81_85;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente84, jpnlDiente81_85);
             llena_Tabla();
         }
@@ -2391,7 +2419,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente83;
 
             jPanel = jpnlDiente81_85;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente83, jpnlDiente81_85);
             llena_Tabla();
         }
@@ -2405,7 +2433,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente82;
 
             jPanel = jpnlDiente81_85;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente82, jpnlDiente81_85);
             llena_Tabla();
         }
@@ -2419,7 +2447,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente81;
 
             jPanel = jpnlDiente81_85;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente81, jpnlDiente81_85);
             llena_Tabla();
         }
@@ -2433,7 +2461,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente48;
 
             jPanel = jpnlDiente41_48;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente48, jpnlDiente41_48);
             llena_Tabla();
         }
@@ -2447,7 +2475,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente47;
 
             jPanel = jpnlDiente41_48;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente47, jpnlDiente41_48);
             llena_Tabla();
         }
@@ -2461,7 +2489,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente46;
 
             jPanel = jpnlDiente41_48;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente46, jpnlDiente41_48);
             llena_Tabla();
         }
@@ -2475,7 +2503,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente45;
 
             jPanel = jpnlDiente41_48;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente45, jpnlDiente41_48);
             llena_Tabla();
         }
@@ -2489,7 +2517,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente44;
 
             jPanel = jpnlDiente41_48;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente44, jpnlDiente41_48);
             llena_Tabla();
         }
@@ -2503,7 +2531,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente43;
 
             jPanel = jpnlDiente41_48;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente43, jpnlDiente41_48);
             llena_Tabla();
         }
@@ -2517,7 +2545,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente42;
 
             jPanel = jpnlDiente41_48;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente42, jpnlDiente41_48);
             llena_Tabla();
         }
@@ -2531,7 +2559,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente41;
 
             jPanel = jpnlDiente41_48;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente41, jpnlDiente41_48);
             llena_Tabla();
         }
@@ -2545,7 +2573,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente21;
 
             jPanel = jpnlDiente21_28;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente21, jpnlDiente21_28);
             llena_Tabla();
         }
@@ -2559,7 +2587,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente22;
 
             jPanel = jpnlDiente21_28;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente22, jpnlDiente21_28);
             llena_Tabla();
         }
@@ -2573,7 +2601,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente23;
 
             jPanel = jpnlDiente21_28;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente23, jpnlDiente21_28);
             llena_Tabla();
         }
@@ -2587,7 +2615,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente24;
 
             jPanel = jpnlDiente21_28;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente24, jpnlDiente21_28);
             llena_Tabla();
         }
@@ -2601,7 +2629,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente25;
 
             jPanel = jpnlDiente21_28;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente25, jpnlDiente21_28);
             llena_Tabla();
         }
@@ -2615,7 +2643,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente26;
 
             jPanel = jpnlDiente21_28;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente26, jpnlDiente21_28);
             llena_Tabla();
         }
@@ -2629,7 +2657,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente27;
 
             jPanel = jpnlDiente21_28;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente27, jpnlDiente21_28);
             llena_Tabla();
         }
@@ -2643,7 +2671,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente28;
 
             jPanel = jpnlDiente21_28;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente28, jpnlDiente21_28);
             llena_Tabla();
         }
@@ -2657,7 +2685,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente61;
 
             jPanel = jpnlDiente61_65;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente61, jpnlDiente61_65);
             llena_Tabla();
         }
@@ -2671,7 +2699,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente62;
 
             jPanel = jpnlDiente61_65;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente62, jpnlDiente61_65);
             llena_Tabla();
         }
@@ -2685,7 +2713,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente63;
 
             jPanel = jpnlDiente61_65;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente63, jpnlDiente61_65);
             llena_Tabla();
         }
@@ -2699,7 +2727,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente64;
 
             jPanel = jpnlDiente61_65;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente64, jpnlDiente61_65);
             llena_Tabla();
         }
@@ -2713,7 +2741,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente65;
 
             jPanel = jpnlDiente61_65;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente65, jpnlDiente61_65);
             llena_Tabla();
         }
@@ -2727,7 +2755,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente71;
 
             jPanel = jpnlDiente71_75;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente71, jpnlDiente71_75);
             llena_Tabla();
         }
@@ -2741,7 +2769,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente72;
 
             jPanel = jpnlDiente71_75;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente72, jpnlDiente71_75);
             llena_Tabla();
         }
@@ -2755,7 +2783,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente73;
 
             jPanel = jpnlDiente71_75;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente73, jpnlDiente71_75);
             llena_Tabla();
         }
@@ -2769,7 +2797,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente74;
 
             jPanel = jpnlDiente71_75;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente74, jpnlDiente71_75);
             llena_Tabla();
         }
@@ -2783,7 +2811,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente75;
 
             jPanel = jpnlDiente71_75;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente75, jpnlDiente71_75);
             llena_Tabla();
         }
@@ -2797,7 +2825,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente31;
 
             jPanel = jpnlDiente31_38;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente31, jpnlDiente31_38);
             llena_Tabla();
         }
@@ -2811,7 +2839,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente32;
 
             jPanel = jpnlDiente31_38;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente32, jpnlDiente31_38);
             llena_Tabla();
         }
@@ -2825,7 +2853,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente33;
 
             jPanel = jpnlDiente31_38;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente33, jpnlDiente31_38);
             llena_Tabla();
         }
@@ -2839,7 +2867,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente34;
 
             jPanel = jpnlDiente31_38;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente34, jpnlDiente31_38);
             llena_Tabla();
         }
@@ -2853,7 +2881,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente35;
 
             jPanel = jpnlDiente31_38;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente35, jpnlDiente31_38);
             llena_Tabla();
         }
@@ -2867,7 +2895,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente36;
 
             jPanel = jpnlDiente31_38;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente36, jpnlDiente31_38);
             llena_Tabla();
         }
@@ -2881,7 +2909,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente37;
 
             jPanel = jpnlDiente31_38;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente37, jpnlDiente31_38);
             llena_Tabla();
         }
@@ -2895,7 +2923,7 @@ public class Odontograma extends javax.swing.JFrame {
             jButton = jbtnDiente38;
 
             jPanel = jpnlDiente31_38;
-        } else {
+        } else if(ConEndodoncia || NecesitaEndodoncia || CoronaBuena || CoronaARealizar || Abracion                 || Atricion || DienteAusente || SinErupcionar || SemiIncluido || IonometroDeVidrio                 || ResinaFisica || Provisional || Giroversion || NucleoBueno || NucleoARealizar){
             Trastornos(jbtnDiente38, jpnlDiente31_38);
             llena_Tabla();
         }
@@ -3594,42 +3622,7 @@ public class Odontograma extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnIonometroDeVidrioActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (this.jTable1.getSelectedRow() < 0) {
-            JOptionPane.showMessageDialog(this, "Debe seleccionar al menos una fila", "Error", JOptionPane.ERROR_MESSAGE);
-        } else {
-            int row, dient;
-            String Traum, nombre;
-            String[] Pos;
-            row = this.jTable1.getSelectedRow();
-            dient = Integer.valueOf(this.jTable1.getValueAt(row, 0).toString());
-            Pos = this.jTable1.getValueAt(row, 2).toString().split(", ");
-            for (int i = 0; i < Pos.length; i++) {
-                switch (Pos[i]) {
-                    case "Centro":
-                        Pos[i] = "centro";
-                        break;
-                    case "Lado Interno":
-                        Pos[i] = "Lderecho";
-                        break;
-                    case "Lado Externo":
-                        Pos[i] = "Lizquierdo";
-                        break;
-                    case "Parte Tracera":
-                        Pos[i] = "inferior";
-                        break;
-                    case "Parte Frontal":
-                        Pos[i] = "superior";
-                        break;
-                }
-                Pos[i] = Pos[i].toLowerCase();
-            }
-            Traum = this.jTable1.getValueAt(row, 1).toString().replace(" ", "");
-            if (Pos.length==1 && "N/A".equals(Pos[0])) {
-                nombre = Traum.concat("Diente").concat(String.valueOf(dient));
-            }else{
-                
-            }
-        }
+        EliminarTrastorno(evt);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -3906,29 +3899,6 @@ public class Odontograma extends javax.swing.JFrame {
                 (screenSize.height - frameSize.height) / 2);
     }
 
-    private void ImagenTrastorno(String Pos, JButton jbtnDiente, JPanel jpnlDiente) {
-        if (null != Pos) {
-            switch (Pos) {
-                case "Centro":
-                    Posiciones("centro", jbtnDiente, jpnlDiente);
-                    break;
-                case "LInterno":
-                    Posiciones("Lderecho", jbtnDiente, jpnlDiente);
-                    break;
-                case "LExterno":
-                    Posiciones("Lizquierdo", jbtnDiente, jpnlDiente);
-                    break;
-                case "PTracera":
-                    Posiciones("inferior", jbtnDiente, jpnlDiente);
-                    break;
-                case "PFrontal":
-                    Posiciones("superior", jbtnDiente, jpnlDiente);
-                    break;
-            }
-        }
-
-    }
-
     private void Posiciones(String pos, JButton jbtnDiente, JPanel jpnlDiente) {
         Pos = pos;
         if (carie) {
@@ -3991,5 +3961,432 @@ public class Odontograma extends javax.swing.JFrame {
         jtbmDetalleOdontograma.addRow(Datos);
         jTable1.setModel(jtbmDetalleOdontograma);
         Reg_Pos = "";
+        VarFalse();
     }
+
+    private void VarFalse() {
+        TraumaAplicado = "";
+        this.carie = false;
+        this.Obturacion = false;
+        this.CoronaBuena = false;
+        this.CoronaARealizar = false;
+        this.ConEndodoncia = false;
+        this.NecesitaEndodoncia = false;
+        this.Trauma = false;
+        this.Recurrente = false;
+        this.DienteAusente = false;
+        this.SinErupcionar = false;
+        this.ConSellante = false;
+        this.NecesitaSellante = false;
+        this.ExodonciaRealizada = false;
+        this.ExodonciaIndicada = false;
+        this.Abracion = false;
+        this.Atricion = false;
+        this.NucleoBueno = false;
+        this.NucleoARealizar = false;
+        this.SemiIncluido = false;
+        this.Giroversion = false;
+        this.Provisional = false;
+        this.ResinaFisica = false;
+        this.IonometroDeVidrio = false;
+    }
+
+    private void EliminarTrastorno(ActionEvent evt) throws NumberFormatException, HeadlessException {
+        if (this.jTable1.getSelectedRow() < 0) {
+            JOptionPane.showMessageDialog(this, "Debe seleccionar al menos una fila", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            int row, dient;
+            String Traum, nombre;
+            row = this.jTable1.getSelectedRow();
+            dient = Integer.valueOf(this.jTable1.getValueAt(row, 0).toString());
+            cod_diente = dient;
+            Posicion = this.jTable1.getValueAt(row, 2).toString().split(", ");
+            llenarPos = this.jTable1.getValueAt(row, 2).toString().split(", ");
+            ArregarPosicion();
+            Traum = this.jTable1.getValueAt(row, 1).toString().replace(" ", "");
+            if (Posicion.length == 1 && "N/A".equals(Posicion[0])) {
+                nombre = Traum.concat("Diente").concat(String.valueOf(dient));
+            } else {
+                VarFalse();
+                ActivarTrauma(Traum, evt);
+                identificarDientePanel(dient);
+                llamarDialogo();
+                ActivarJChekBox(evt);
+            }
+            
+            for (int i = 0; i < Posicion.length; i++) {
+                if (!Posicion[i].equals("N/A")) {
+                    Posicion[i] = Traum.concat(Posicion[i]).concat("Diente").concat(String.valueOf(dient));
+                } else {
+                    Posicion[i] = Traum.concat("Diente").concat(String.valueOf(dient));
+                }
+            }
+            
+            OcultarElemento(dient, Traum);
+            this.jtbmDetalleOdontograma.removeRow(row);
+            this.jTable1.setModel(jtbmDetalleOdontograma);
+        }
+    }
+
+    private void ActivarJChekBox(ActionEvent evt) {
+        for (String llenarPos1 : llenarPos) {
+            if (jchbCentro.getName().equals(llenarPos1)) {
+                jchbCentro.setSelected(true);
+                jchbCentroActionPerformed(evt);
+            } else if (jchbLExterno.getName().equals(llenarPos1)) {
+                jchbLExterno.setSelected(true);
+                jchbLExternoActionPerformed(evt);
+            } else if (jchbLInterno.getName().equals(llenarPos1)) {
+                jchbLInterno.setSelected(true);
+                jchbLInternoActionPerformed(evt);
+            } else if (jchbPFrontal.getName().equals(llenarPos1)) {
+                jchbPFrontal.setSelected(true);
+                jchbPFrontalActionPerformed(evt);
+            } else if (jchbLExterno.getName().equals(llenarPos1)) {
+                jchbPTracera.setSelected(true);
+                jchbPTraceraActionPerformed(evt);
+            }
+        }
+    }
+
+    private void ArregarPosicion() {
+        for (int i = 0; i < Posicion.length; i++) {
+            switch (Posicion[i]) {
+                case "Centro":
+                    Posicion[i] = "centro";
+                    llenarPos[i] = "jchbCentro";
+                    break;
+                case "Lado Interno":
+                    Posicion[i] = "Lderecho";
+                    llenarPos[i] = "jchbLInterno";
+                    break;
+                case "Lado Externo":
+                    Posicion[i] = "Lizquierdo";
+                    llenarPos[i] = "jchbLExterno";
+                    break;
+                case "Parte Tracera":
+                    Posicion[i] = "inferior";
+                    llenarPos[i] = "jchbPTracera";
+                    break;
+                case "Parte Frontal":
+                    Posicion[i] = "superior";
+                    llenarPos[i] = "jchbPFrontal";
+                    break;
+            }
+        }
+    }
+
+    private void OcultarElemento(int dient, String Traum) {
+        if (dient >= 11 && dient <= 18) {
+            for (int i = 0; i < jpnlDiente11_18.getComponentCount(); i++) {
+                if (jpnlDiente11_18.getComponent(i).getName() != null) {
+                    for (String Posicion1 : Posicion) {
+                        if (jpnlDiente11_18.getComponent(i).getName().toUpperCase().equals(Posicion1.toUpperCase())) {
+                            jpnlDiente11_18.getComponent(i).setVisible(false);
+                        }
+                    }
+                }
+            }
+        } else if (dient >= 51 && dient <= 55) {
+            for (int i = 0; i < jpnlDiente51_55.getComponentCount(); i++) {
+                if (jpnlDiente51_55.getComponent(i).getName() != null) {
+                    for (String Posicion1 : Posicion) {
+                        if (jpnlDiente51_55.getComponent(i).getName().toUpperCase().equals(Posicion1.toUpperCase())) {
+                            jpnlDiente51_55.getComponent(i).setVisible(false);
+                        }
+                    }
+                }
+            }
+        } else if (dient >= 81 && dient <= 85) {
+            for (int i = 0; i < jpnlDiente81_85.getComponentCount(); i++) {
+                if (jpnlDiente81_85.getComponent(i).getName() != null) {
+                    for (String Posicion1 : Posicion) {
+                        if (jpnlDiente81_85.getComponent(i).getName().toUpperCase().equals(Posicion1.toUpperCase())) {
+                            jpnlDiente81_85.getComponent(i).setVisible(false);
+                        }
+                    }
+                }
+            }
+        } else if (dient >= 41 && dient <= 48) {
+            for (int i = 0; i < jpnlDiente41_48.getComponentCount(); i++) {
+                if (jpnlDiente41_48.getComponent(i).getName() != null) {
+                    for (String Posicion1 : Posicion) {
+                        if (jpnlDiente41_48.getComponent(i).getName().toUpperCase().equals(Posicion1.toUpperCase())) {
+                            jpnlDiente41_48.getComponent(i).setVisible(false);
+                        }
+                    }
+                }
+            }
+        } else if (dient >= 21 && dient <= 28) {
+
+            for (int i = 0; i < jpnlDiente21_28.getComponentCount(); i++) {
+                if (jpnlDiente21_28.getComponent(i).getName() != null) {
+                    for (String Posicion1 : Posicion) {
+                        if (jpnlDiente21_28.getComponent(i).getName().toUpperCase().equals(Posicion1.toUpperCase())) {
+                            jpnlDiente21_28.getComponent(i).setVisible(false);
+                        }
+                    }
+                }
+            }
+        } else if (dient >= 61 && dient <= 65) {
+            for (int i = 0; i < jpnlDiente61_65.getComponentCount(); i++) {
+                if (jpnlDiente61_65.getComponent(i).getName() != null) {
+                    for (String Posicion1 : Posicion) {
+                        if (jpnlDiente61_65.getComponent(i).getName().toUpperCase().equals(Posicion1.toUpperCase())) {
+                            jpnlDiente61_65.getComponent(i).setVisible(false);
+                        }
+                    }
+                }
+            }
+        } else if (dient >= 71 && dient <= 75) {
+            for (int i = 0; i < jpnlDiente71_75.getComponentCount(); i++) {
+                if (jpnlDiente71_75.getComponent(i).getName() != null) {
+                    for (String Posicion1 : Posicion) {
+                        if (jpnlDiente71_75.getComponent(i).getName().toUpperCase().equals(Posicion1.toUpperCase())) {
+                            jpnlDiente71_75.getComponent(i).setVisible(false);
+                        }
+                    }
+                }
+            }
+        } else if (dient >= 31 && dient <= 38) {
+            for (int i = 0; i < jpnlDiente31_38.getComponentCount(); i++) {
+                if (jpnlDiente31_38.getComponent(i).getName() != null) {
+                    for (String Posicion1 : Posicion) {
+                        if (jpnlDiente31_38.getComponent(i).getName().toUpperCase().equals(Posicion1.toUpperCase())) {
+                            jpnlDiente31_38.getComponent(i).setVisible(false);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private void ActivarTrauma(String Traum, ActionEvent evt) {
+        if (Traum.toUpperCase().equals(this.jbtnCarie.getName().substring(4).toUpperCase())) {
+            jbtnCarieActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnObturacion.getName().substring(4).toUpperCase())) {
+            jbtnObturacionActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnCoronaARealizar.getName().substring(4).toUpperCase())) {
+            jbtnCoronaARealizarActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnNecesitaEndodoncia.getName().substring(4).toUpperCase())) {
+            jbtnNecesitaEndodonciaActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnTrauma.getName().substring(4).toUpperCase())) {
+            jbtnTraumaActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnRecurrente.getName().substring(4).toUpperCase())) {
+            jbtnRecurrenteActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnDienteAusente.getName().substring(4).toUpperCase())) {
+            jbtnDienteAusenteActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnSinErupcionar.getName().substring(4).toUpperCase())) {
+            jbtnSinErupcionarActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnConSellante.getName().substring(4).toUpperCase())) {
+            jbtnConSellanteActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnNecesitaSellante.getName().substring(4).toUpperCase())) {
+            jbtnNecesitaSellanteActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnCoronaBuena.getName().substring(4).toUpperCase())) {
+            jbtnCoronaBuenaActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnConEndodoncia.getName().substring(4).toUpperCase())) {
+            jbtnConEndodonciaActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnExodonciaIndicada.getName().substring(4).toUpperCase())) {
+            jbtnExodonciaIndicadaActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnAbrasion.getName().substring(4).toUpperCase())) {
+            jbtnAbrasionActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnAtricion.getName().substring(4).toUpperCase())) {
+            jbtnAtricionActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnNucleoARealizar.getName().substring(4).toUpperCase())) {
+            jbtnNucleoARealizarActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnSemiIncluido.getName().substring(4).toUpperCase())) {
+            jbtnSemiIncluidoActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnGiroversion.getName().substring(4).toUpperCase())) {
+            jbtnGiroversionActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnProvisional.getName().substring(4).toUpperCase())) {
+            jbtnProvisionalActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnResinaFisica.getName().substring(4).toUpperCase())) {
+            jbtnResinaFisicaActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnIonometroDeVidrio.getName().substring(4).toUpperCase())) {
+            jbtnIonometroDeVidrioActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnExodonciaRealizada.getName().substring(4).toUpperCase())) {
+            jbtnExodonciaRealizadaActionPerformed(evt);
+        } else if (Traum.toUpperCase().equals(this.jbtnNucleoBueno.getName().substring(4).toUpperCase())) {
+            jbtnNucleoBuenoActionPerformed(evt);
+        }
+    }
+
+    private void identificarDientePanel(int dient) {
+        if (dient >= 11 && dient <= 18) {
+            jPanel = jpnlDiente11_18;
+        } else if (dient >= 21 && dient <= 28) {
+            jPanel = jpnlDiente21_28;
+        } else if (dient >= 31 && dient <= 38) {
+            jPanel = jpnlDiente31_38;
+        } else if (dient >= 41 && dient <= 48) {
+            jPanel = jpnlDiente41_48;
+        } else if (dient >= 51 && dient <= 55) {
+            jPanel = jpnlDiente51_55;
+        } else if (dient >= 61 && dient <= 65) {
+            jPanel = jpnlDiente61_65;
+        } else if (dient >= 71 && dient <= 75) {
+            jPanel = jpnlDiente71_75;
+        } else if (dient >= 81 && dient <= 85) {
+            jPanel = jpnlDiente81_85;
+        }
+        switch (dient) {
+            case 11:
+                jButton = jbtnDiente11;
+                break;
+            case 12:
+                jButton = jbtnDiente12;
+                break;
+            case 13:
+                jButton = jbtnDiente13;
+                break;
+            case 14:
+                jButton = jbtnDiente14;
+                break;
+            case 15:
+                jButton = jbtnDiente15;
+                break;
+            case 16:
+                jButton = jbtnDiente16;
+                break;
+            case 17:
+                jButton = jbtnDiente17;
+                break;
+            case 18:
+                jButton = jbtnDiente18;
+                break;
+            case 21:
+                jButton = jbtnDiente21;
+                break;
+            case 22:
+                jButton = jbtnDiente22;
+                break;
+            case 23:
+                jButton = jbtnDiente23;
+                break;
+            case 24:
+                jButton = jbtnDiente24;
+                break;
+            case 25:
+                jButton = jbtnDiente25;
+                break;
+            case 26:
+                jButton = jbtnDiente26;
+                break;
+            case 27:
+                jButton = jbtnDiente27;
+                break;
+            case 28:
+                jButton = jbtnDiente28;
+                break;
+            case 31:
+                jButton = jbtnDiente31;
+                break;
+            case 32:
+                jButton = jbtnDiente32;
+                break;
+            case 33:
+                jButton = jbtnDiente33;
+                break;
+            case 34:
+                jButton = jbtnDiente34;
+                break;
+            case 35:
+                jButton = jbtnDiente35;
+                break;
+            case 36:
+                jButton = jbtnDiente36;
+                break;
+            case 37:
+                jButton = jbtnDiente37;
+                break;
+            case 38:
+                jButton = jbtnDiente38;
+                break;
+            case 41:
+                jButton = jbtnDiente41;
+                break;
+            case 42:
+                jButton = jbtnDiente42;
+                break;
+            case 43:
+                jButton = jbtnDiente43;
+                break;
+            case 44:
+                jButton = jbtnDiente44;
+                break;
+            case 45:
+                jButton = jbtnDiente45;
+                break;
+            case 46:
+                jButton = jbtnDiente46;
+                break;
+            case 47:
+                jButton = jbtnDiente47;
+                break;
+            case 48:
+                jButton = jbtnDiente48;
+                break;
+            case 51:
+                jButton = jbtnDiente51;
+                break;
+            case 52:
+                jButton = jbtnDiente52;
+                break;
+            case 53:
+                jButton = jbtnDiente53;
+                break;
+            case 54:
+                jButton = jbtnDiente54;
+                break;
+            case 55:
+                jButton = jbtnDiente55;
+                break;
+            case 61:
+                jButton = jbtnDiente61;
+                break;
+            case 62:
+                jButton = jbtnDiente62;
+                break;
+            case 63:
+                jButton = jbtnDiente63;
+                break;
+            case 64:
+                jButton = jbtnDiente64;
+                break;
+            case 65:
+                jButton = jbtnDiente65;
+                break;
+            case 71:
+                jButton = jbtnDiente71;
+                break;
+            case 72:
+                jButton = jbtnDiente72;
+                break;
+            case 73:
+                jButton = jbtnDiente73;
+                break;
+            case 74:
+                jButton = jbtnDiente74;
+                break;
+            case 75:
+                jButton = jbtnDiente75;
+                break;
+            case 81:
+                jButton = jbtnDiente81;
+                break;
+            case 82:
+                jButton = jbtnDiente82;
+                break;
+            case 83:
+                jButton = jbtnDiente83;
+                break;
+            case 84:
+                jButton = jbtnDiente84;
+                break;
+            case 85:
+                jButton = jbtnDiente85;
+                break;
+        }
+    }
+
 }

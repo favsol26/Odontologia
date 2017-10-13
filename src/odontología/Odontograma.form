@@ -84,6 +84,7 @@
             <Component class="javax.swing.JCheckBox" name="jchbCentro">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Centro"/>
+                <Property name="name" type="java.lang.String" value="jchbCentro" noResource="true"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jchbCentroActionPerformed"/>
@@ -92,6 +93,7 @@
             <Component class="javax.swing.JCheckBox" name="jchbLInterno">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Lateral Interno"/>
+                <Property name="name" type="java.lang.String" value="jchbLInterno" noResource="true"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jchbLInternoActionPerformed"/>
@@ -100,6 +102,7 @@
             <Component class="javax.swing.JCheckBox" name="jchbLExterno">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Lateral Externo"/>
+                <Property name="name" type="java.lang.String" value="jchbLExterno" noResource="true"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jchbLExternoActionPerformed"/>
@@ -108,6 +111,7 @@
             <Component class="javax.swing.JCheckBox" name="jchbPFrontal">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Parte Frontal"/>
+                <Property name="name" type="java.lang.String" value="jchbPFrontal" noResource="true"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jchbPFrontalActionPerformed"/>
@@ -116,6 +120,7 @@
             <Component class="javax.swing.JCheckBox" name="jchbPTracera">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Parte Tracera"/>
+                <Property name="name" type="java.lang.String" value="jchbPTracera" noResource="true"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jchbPTraceraActionPerformed"/>
@@ -202,7 +207,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="jpnlOdontograma" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
@@ -210,8 +215,8 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="jScrollPane1" min="-2" pref="1167" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton1" max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -226,15 +231,10 @@
                   <Component id="jpnlOdontograma" max="32767" attributes="0"/>
                   <Component id="jPanel1" max="32767" attributes="0"/>
               </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="200" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="jScrollPane1" min="-2" pref="200" max="-2" attributes="0"/>
+                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
           </Group>
@@ -2779,6 +2779,7 @@
         <Component class="javax.swing.JButton" name="jbtnCarie">
           <Properties>
             <Property name="text" type="java.lang.String" value="Carie"/>
+            <Property name="name" type="java.lang.String" value="jbtnCarie" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnCarieActionPerformed"/>
@@ -2787,6 +2788,7 @@
         <Component class="javax.swing.JButton" name="jbtnObturacion">
           <Properties>
             <Property name="text" type="java.lang.String" value="Obturaci&#xf3;n"/>
+            <Property name="name" type="java.lang.String" value="jbtnObturacion" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnObturacionActionPerformed"/>
@@ -2795,6 +2797,7 @@
         <Component class="javax.swing.JButton" name="jbtnCoronaBuena">
           <Properties>
             <Property name="text" type="java.lang.String" value="Corona Buena"/>
+            <Property name="name" type="java.lang.String" value="jbtnCoronaBuena" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnCoronaBuenaActionPerformed"/>
@@ -2803,6 +2806,7 @@
         <Component class="javax.swing.JButton" name="jbtnCoronaARealizar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Corona a Realizar"/>
+            <Property name="name" type="java.lang.String" value="jbtnCoronaARealizar" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnCoronaARealizarActionPerformed"/>
@@ -2811,6 +2815,7 @@
         <Component class="javax.swing.JButton" name="jbtnConEndodoncia">
           <Properties>
             <Property name="text" type="java.lang.String" value="Con Endodoncia"/>
+            <Property name="name" type="java.lang.String" value="jbtnConEndodoncia" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnConEndodonciaActionPerformed"/>
@@ -2819,6 +2824,7 @@
         <Component class="javax.swing.JButton" name="jbtnNecesitaEndodoncia">
           <Properties>
             <Property name="text" type="java.lang.String" value="Necesita Endodoncia"/>
+            <Property name="name" type="java.lang.String" value="jbtnNecesitaEndodoncia" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnNecesitaEndodonciaActionPerformed"/>
@@ -2827,6 +2833,7 @@
         <Component class="javax.swing.JButton" name="jbtnTrauma">
           <Properties>
             <Property name="text" type="java.lang.String" value="Trauma"/>
+            <Property name="name" type="java.lang.String" value="jbtnTrauma" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnTraumaActionPerformed"/>
@@ -2835,6 +2842,7 @@
         <Component class="javax.swing.JButton" name="jbtnRecurrente">
           <Properties>
             <Property name="text" type="java.lang.String" value="Recurrente"/>
+            <Property name="name" type="java.lang.String" value="jbtnRecurrente" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnRecurrenteActionPerformed"/>
@@ -2843,6 +2851,7 @@
         <Component class="javax.swing.JButton" name="jbtnDienteAusente">
           <Properties>
             <Property name="text" type="java.lang.String" value="Diente Ausente"/>
+            <Property name="name" type="java.lang.String" value="jbtnDienteAusente" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnDienteAusenteActionPerformed"/>
@@ -2851,6 +2860,7 @@
         <Component class="javax.swing.JButton" name="jbtnSinErupcionar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sin Erupcionar"/>
+            <Property name="name" type="java.lang.String" value="jbtnSinErupcionar" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnSinErupcionarActionPerformed"/>
@@ -2859,6 +2869,7 @@
         <Component class="javax.swing.JButton" name="jbtnConSellante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Con Sellante"/>
+            <Property name="name" type="java.lang.String" value="jbtnConSellante" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnConSellanteActionPerformed"/>
@@ -2867,6 +2878,7 @@
         <Component class="javax.swing.JButton" name="jbtnNecesitaSellante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Necesita Sellante"/>
+            <Property name="name" type="java.lang.String" value="jbtnNecesitaSellante" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnNecesitaSellanteActionPerformed"/>
@@ -2875,6 +2887,7 @@
         <Component class="javax.swing.JButton" name="jbtnExodonciaRealizada">
           <Properties>
             <Property name="text" type="java.lang.String" value="Exodoncia Realizada"/>
+            <Property name="name" type="java.lang.String" value="jbtnExodonciaRealizada" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnExodonciaRealizadaActionPerformed"/>
@@ -2882,7 +2895,8 @@
         </Component>
         <Component class="javax.swing.JButton" name="jbtnExodonciaIndicada">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Exodoncia Iniciada"/>
+            <Property name="text" type="java.lang.String" value="Exodoncia Indicada"/>
+            <Property name="name" type="java.lang.String" value="jbtnExodonciaIndicada" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnExodonciaIndicadaActionPerformed"/>
@@ -2891,6 +2905,7 @@
         <Component class="javax.swing.JButton" name="jbtnAbrasion">
           <Properties>
             <Property name="text" type="java.lang.String" value="Abracion"/>
+            <Property name="name" type="java.lang.String" value="jbtnAbrasion" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnAbrasionActionPerformed"/>
@@ -2899,6 +2914,7 @@
         <Component class="javax.swing.JButton" name="jbtnAtricion">
           <Properties>
             <Property name="text" type="java.lang.String" value="Atrici&#xf3;n"/>
+            <Property name="name" type="java.lang.String" value="jbtnAtricion" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnAtricionActionPerformed"/>
@@ -2907,6 +2923,7 @@
         <Component class="javax.swing.JButton" name="jbtnNucleoBueno">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nucleo Bueno"/>
+            <Property name="name" type="java.lang.String" value="jbtnNucleoBueno" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnNucleoBuenoActionPerformed"/>
@@ -2915,6 +2932,7 @@
         <Component class="javax.swing.JButton" name="jbtnNucleoARealizar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nucleo a Realizar"/>
+            <Property name="name" type="java.lang.String" value="jbtnNucleoARealizar" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnNucleoARealizarActionPerformed"/>
@@ -2923,6 +2941,7 @@
         <Component class="javax.swing.JButton" name="jbtnSemiIncluido">
           <Properties>
             <Property name="text" type="java.lang.String" value="Semi Incluido"/>
+            <Property name="name" type="java.lang.String" value="jbtnSemiIncluido" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnSemiIncluidoActionPerformed"/>
@@ -2931,6 +2950,7 @@
         <Component class="javax.swing.JButton" name="jbtnGiroversion">
           <Properties>
             <Property name="text" type="java.lang.String" value="Giroversi&#xf3;n"/>
+            <Property name="name" type="java.lang.String" value="jbtnGiroversion" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnGiroversionActionPerformed"/>
@@ -2939,6 +2959,7 @@
         <Component class="javax.swing.JButton" name="jbtnProvisional">
           <Properties>
             <Property name="text" type="java.lang.String" value="Provisional"/>
+            <Property name="name" type="java.lang.String" value="jbtnProvisional" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnProvisionalActionPerformed"/>
@@ -2947,6 +2968,7 @@
         <Component class="javax.swing.JButton" name="jbtnResinaFisica">
           <Properties>
             <Property name="text" type="java.lang.String" value="Resina F&#xed;sica"/>
+            <Property name="name" type="java.lang.String" value="jbtnResinaFisica" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnResinaFisicaActionPerformed"/>
@@ -2955,6 +2977,7 @@
         <Component class="javax.swing.JButton" name="jbtnIonometroDeVidrio">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ionometro de Vidrio"/>
+            <Property name="name" type="java.lang.String" value="jbtnIonometroDeVidrio" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnIonometroDeVidrioActionPerformed"/>
